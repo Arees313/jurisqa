@@ -17,7 +17,7 @@
     },
     {
       "src": "/ask",
-      "dest": "api/aiprompt.py",
+      "dest": "api/aiprompt",
       "methods": ["POST"]
     },
     {
