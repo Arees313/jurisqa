@@ -29,7 +29,7 @@ cachetools==5.3.1
 certifi==2025.7.14
 cffi==1.17.0
 charset-normalizer==3.3.0
-click==8.1.7
+click==7.0
 colorama==0.4.6
 comm==0.2.2
 confluent-kafka==2.3.0
