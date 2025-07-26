@@ -2,23 +2,27 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/ask.py",
+      "src": "api/aiprompt.py",
       "use": "@vercel/python"
     },
     {
-      "src": "public/*",
+      "src": "static/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "static/$1"
+    },
+    {
       "src": "/ask",
-      "dest": "api/ask.py",
+      "dest": "api/aiprompt.py",
       "methods": ["POST"]
     },
     {
       "src": "/(.*)",
-      "dest": "public/index.html"
+      "dest": "static/index.html"
     }
   ]
 }
