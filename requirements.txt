@@ -24,3 +24,9 @@ python-dotenv==1.1.1
 sentence-transformers
 faiss-cpu
 numpy
+
+flask
+faiss-cpu
+sentence-transformers
+numpy
+werkzeug
