@@ -1,4 +1,3 @@
-from flask import Flask, request, jsonify, send_from_directory
 import json
 import faiss
 import numpy as np
@@ -6,9 +5,17 @@ import unicodedata
 import re
 from sentence_transformers import SentenceTransformer
 import os
-from werkzeug.middleware.proxy_fix import ProxyFix
+from fastapi import FastAPI
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
-# -------------------------------
+# Get the current directory path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+static_dir = os.path.join(current_dir, "static")
+
+# Moun# -------------------------------
 # CONFIGURATION
 # -------------------------------
 MODEL_NAME = "multi-qa-MiniLM-L6-cos-v1"
@@ -19,13 +26,7 @@ DISTANCE_THRESHOLD = 1.2
 TOP_K = 3
 
 # -------------------------------
-# INITIALIZATION
-# -------------------------------
-app = Flask(__name__, static_folder='static')
-app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
-
-# -------------------------------
-# HELPER FUNCTIONS (same as before)
+# NORMALIZE TEXT
 # -------------------------------
 def normalize(text):
     text = text.lower()
@@ -33,6 +34,9 @@ def normalize(text):
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
+# -------------------------------
+# LOAD DATA
+# -------------------------------
 print("📖 Loading Q&A data...")
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     qa_data = json.load(f)
@@ -47,6 +51,9 @@ for item in qa_data:
     text = f"Question: {question}\nKeywords: {keywords}\nTags: {tags}\nCategory: {category}\nAnswer: {answer}"
     indexed_texts.append(normalize(text))
 
+# -------------------------------
+# LOAD EMBEDDINGS & INDEX
+# -------------------------------
 model = SentenceTransformer(MODEL_NAME)
 
 if os.path.exists(FAISS_INDEX_FILE) and os.path.exists(EMBEDDINGS_FILE):
@@ -62,10 +69,16 @@ else:
     faiss.write_index(index, FAISS_INDEX_FILE)
     print("✅ Index built and saved")
 
+# -------------------------------
+# GREETING CHECK
+# -------------------------------
 def is_greeting(text):
     greetings = ["hello", "hi", "salaam", "hey", "peace", "assalamu alaikum"]
     return normalize(text) in greetings
 
+# -------------------------------
+# GET ANSWER FUNCTION
+# -------------------------------
 def get_answer(user_query, top_k=TOP_K, distance_threshold=DISTANCE_THRESHOLD):
     query_embedding = model.encode([normalize(user_query)])
     distances, indices = index.search(query_embedding, top_k)
@@ -88,43 +101,42 @@ def get_answer(user_query, top_k=TOP_K, distance_threshold=DISTANCE_THRESHOLD):
     }
 
 # -------------------------------
-# FLASK ROUTES
+# FASTAPI APP
 # -------------------------------
-@app.route('/')
+app = FastAPI()
+
+# Serve static files
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+@app.get("/")
 def serve_index():
-    return send_from_directory(app.static_folder, 'index.html')
+    return FileResponse(os.path.join(static_dir, "index.html"))
 
-@app.route('/static/<path:path>')
-def serve_static(path):
-    return send_from_directory(app.static_folder, path)
+# CORS configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.route('/ask', methods=['POST'])
-def ask_question():
-    data = request.get_json()
-    question = data.get('question', '')
+class QuestionInput(BaseModel):
+    question: str
+
+@app.post("/ask")
+def ask_question(data: QuestionInput):
+    print(f"📩 Received question: '{data.question}'")
     
-    print(f"📩 Received question: '{question}'")
-    
-    if is_greeting(question):
+    if is_greeting(data.question):
         response = {
             "answer": "Hello! Please ask a jurisprudential question.",
             "matched_question": None,
             "source": "N/A"
         }
     else:
-        response = get_answer(question)
+        response = get_answer(data.question)
     
     print(f"📤 Returning response: {response}")
-    return jsonify(response)
-
-# CORS handling
-@app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
 
-if __name__ == '__main__':
-    print("\n✅ Server ready! Access the UI at http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000)
+print("\n✅ Server ready! Access the UI at http://localhost:8000")
