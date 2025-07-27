@@ -23,8 +23,15 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             color: #2c3e50;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
         }
 
         textarea {
@@ -80,22 +87,92 @@
             line-height: 1.6;
         }
 
+        .answer-display a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .answer-display a:hover {
+            text-decoration: underline;
+        }
+
         .source {
             margin-top: 15px;
             font-size: 13px;
             color: #555;
+        }
+
+        .flag-image {
+            display: block;
+            margin: 30px auto 0;
+            max-width: 80%; /* Reduced size by 20% */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .links a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .video-container iframe {
+            max-width: 100%;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Jurisprudence of Ahmed Alhasan (pbuh)</h2>
+        <div class="disclaimer">
+            Under Development: Answers may be incomplete or inaccurate. Please consult with the official jurisprudential committee at alljnahalfkheah@yahoo.com or authentic works of the Imam (pbuh), his books, or verified translations in Facebook groups for accurate jurisprudential guidance.
+        </div>
         <textarea id="question" placeholder="Type your question here..."></textarea>
         <button onclick="askQuestion()">Submit</button>
         <div id="answer-content"></div>
+        <!-- Add the flag image -->
+        <img src="static/flag.png" alt="Flag" class="flag-image">
+        <!-- Add clickable links -->
+        <div class="links">
+            <p>
+                Official Arabic Website: 
+                <a href="https://almahdyoon.com" target="_blank" rel="noopener noreferrer">Almahdyoon.com</a>
+            </p>
+            <p>
+                Official English Website: 
+                <a href="https://saviorofmankind.com" target="_blank" rel="noopener noreferrer">Saviorofmankind.com</a>
+            </p>
+        </div>
     </div>
 
     <script>
+        let dotInterval; // Global to allow clearing
+
+        function animateDots() {
+            const dotsElement = document.querySelector('.dots');
+            let count = 0;
+            dotInterval = setInterval(() => {
+                count = (count + 1) % 4;
+                dotsElement.textContent = '.'.repeat(count);
+            }, 500);
+        }
+
         async function askQuestion() {
             const question = document.getElementById('question').value.trim();
             const answerContent = document.getElementById('answer-content');
@@ -108,9 +185,11 @@
             answerContent.innerHTML = `
                 <div class="loading">
                     <div class="question-display">Question: ${question}</div>
-                    <p>Consulting scholars...</p>
+                    <p>Looking for an answer<span class="dots"></span></p>
                 </div>
             `;
+
+            animateDots(); // Start the dot animation
 
             try {
                 const response = await fetch('/ask', {
@@ -119,6 +198,8 @@
                     body: JSON.stringify({ question })
                 });
 
+                clearInterval(dotInterval); // Stop animation when done
+
                 if (!response.ok) {
                     throw new Error(`Server responded with ${response.status}`);
                 }
@@ -126,10 +207,39 @@
                 const data = await response.json();
 
                 if (data.answer && data.answer !== "undefined") {
+                    // Check if the answer contains a YouTube link
+                    const youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+                    const youtubeMatch = data.answer.match(youtubeRegex);
+
+                    let embeddedContent = '';
+
+                    if (youtubeMatch) {
+                        const videoId = youtubeMatch[1]; // Extract the video ID
+                        embeddedContent = `
+                            <div class="video-container">
+                                <iframe 
+                                    width="560" 
+                                    height="315" 
+                                    src="https://www.youtube.com/embed/${videoId}" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        `;
+                    }
+
+                    // Check if the answer contains a URL and make it clickable
+                    const clickableAnswer = data.answer.replace(
+                        /(https?:\/\/[^\s]+)/g,
+                        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+                    );
+
                     answerContent.innerHTML = `
                         <div class="question-display">Question: ${question}</div>
                         <div class="answer-section">
-                            <div class="answer-display">${data.answer}</div>
+                            <div class="answer-display">${clickableAnswer}</div>
+                            ${embeddedContent}
                             ${data.source && data.source !== "N/A" ? 
                                 `<div class="source">Source: ${data.source}</div>` : ''}
                         </div>
@@ -141,6 +251,7 @@
                     `;
                 }
             } catch (error) {
+                clearInterval(dotInterval); // Stop animation on error
                 console.error('Error:', error);
                 answerContent.innerHTML = `
                     <div class="error">

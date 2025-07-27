@@ -1,142 +1,59 @@
 import json
-import faiss
-import numpy as np
-import unicodedata
-import re
 from sentence_transformers import SentenceTransformer
-import os
-from fastapi import FastAPI
-from pydantic import BaseModel
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from llama_index.core import VectorStoreIndex, Document, Settings
+from llama_index.core.node_parser import SimpleNodeParser
+from llama_index.llms.ollama import Ollama
+from llama_index.core.embeddings import BaseEmbedding  # Updated import path
 
-# Get the current directory path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-static_dir = os.path.join(current_dir, "static")
+# Load Q&A from file
+with open("qa_data.json", "r", encoding="utf-8") as f:
+    qa_list = json.load(f)
 
-# Moun# -------------------------------
-# CONFIGURATION
-# -------------------------------
-MODEL_NAME = "multi-qa-MiniLM-L6-cos-v1"
-EMBEDDINGS_FILE = "qa_embeddings.npy"
-FAISS_INDEX_FILE = "qa.index"
-DATA_FILE = "qa_data.json"
-DISTANCE_THRESHOLD = 1.2
-TOP_K = 3
+documents = []
+for item in qa_list:
+    q = item["question"]
+    a = item["answer"]
+    full_text = f"Q: {q}\nA: {a}"
+    documents.append(Document(text=full_text))
 
-# -------------------------------
-# NORMALIZE TEXT
-# -------------------------------
-def normalize(text):
-    text = text.lower()
-    text = unicodedata.normalize("NFKC", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+# Custom Embedding Class (now compatible with latest llama-index)
+class CustomEmbedding(BaseEmbedding):
+    def __init__(self, model_name="all-MiniLM-L6-v2"):
+        super().__init__()
+        self._model = SentenceTransformer(model_name)
 
-# -------------------------------
-# LOAD DATA
-# -------------------------------
-print("📖 Loading Q&A data...")
-with open(DATA_FILE, "r", encoding="utf-8") as f:
-    qa_data = json.load(f)
+    def _get_text_embedding(self, text: str) -> list[float]:
+        return self._model.encode(text).tolist()
 
-indexed_texts = []
-for item in qa_data:
-    keywords = " ".join(item.get("keywords", []))
-    tags = " ".join(item.get("tags", []))
-    category = item.get("category", "")
-    question = item.get("question", "")
-    answer = item.get("answer", "")
-    text = f"Question: {question}\nKeywords: {keywords}\nTags: {tags}\nCategory: {category}\nAnswer: {answer}"
-    indexed_texts.append(normalize(text))
+    async def _aget_text_embedding(self, text: str) -> list[float]:
+        return self._get_text_embedding(text)
 
-# -------------------------------
-# LOAD EMBEDDINGS & INDEX
-# -------------------------------
-model = SentenceTransformer(MODEL_NAME)
+    def _get_query_embedding(self, query: str) -> list[float]:
+        return self._get_text_embedding(query)
 
-if os.path.exists(FAISS_INDEX_FILE) and os.path.exists(EMBEDDINGS_FILE):
-    print("🔁 Loading existing index...")
-    index = faiss.read_index(FAISS_INDEX_FILE)
-else:
-    print("⚙️ Building new index...")
-    embeddings = model.encode(indexed_texts, show_progress_bar=True)
-    np.save(EMBEDDINGS_FILE, embeddings)
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)
-    index.add(np.array(embeddings))
-    faiss.write_index(index, FAISS_INDEX_FILE)
-    print("✅ Index built and saved")
+    async def _aget_query_embedding(self, query: str) -> list[float]:
+        return self._get_query_embedding(query)
 
-# -------------------------------
-# GREETING CHECK
-# -------------------------------
-def is_greeting(text):
-    greetings = ["hello", "hi", "salaam", "hey", "peace", "assalamu alaikum"]
-    return normalize(text) in greetings
+# Initialize components
+custom_embed_model = CustomEmbedding()
+llm = Ollama(model="mistral")  # Ensure Ollama is running locally!
 
-# -------------------------------
-# GET ANSWER FUNCTION
-# -------------------------------
-def get_answer(user_query, top_k=TOP_K, distance_threshold=DISTANCE_THRESHOLD):
-    query_embedding = model.encode([normalize(user_query)])
-    distances, indices = index.search(query_embedding, top_k)
+# Configure global Settings (replaces ServiceContext)
+Settings.llm = llm
+Settings.embed_model = custom_embed_model
+Settings.node_parser = SimpleNodeParser()
 
-    for i in range(top_k):
-        best_distance = distances[0][i]
-        best_idx = indices[0][i]
-        if best_distance <= distance_threshold:
-            matched_item = qa_data[best_idx]
-            return {
-                "matched_question": matched_item["question"],
-                "answer": matched_item["answer"],
-                "source": matched_item.get("source", "No source provided")
-            }
+# Build index
+nodes = Settings.node_parser.get_nodes_from_documents(documents)
+index = VectorStoreIndex(nodes)  # No need for service_context
 
-    return {
-        "matched_question": None,
-        "answer": "Sorry, I couldn't find a close match. Try rephrasing your question.",
-        "source": "N/A"
-    }
+# Query engine
+query_engine = index.as_query_engine()
 
-# -------------------------------
-# FASTAPI APP
-# -------------------------------
-app = FastAPI()
-
-# Serve static files
-app.mount("/static", StaticFiles(directory=static_dir), name="static")
-
-@app.get("/")
-def serve_index():
-    return FileResponse(os.path.join(static_dir, "index.html"))
-
-# CORS configuration
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-class QuestionInput(BaseModel):
-    question: str
-
-@app.post("/ask")
-def ask_question(data: QuestionInput):
-    print(f"📩 Received question: '{data.question}'")
-    
-    if is_greeting(data.question):
-        response = {
-            "answer": "Hello! Please ask a jurisprudential question.",
-            "matched_question": None,
-            "source": "N/A"
-        }
-    else:
-        response = get_answer(data.question)
-    
-    print(f"📤 Returning response: {response}")
-    return response
-
-print("\n✅ Server ready! Access the UI at http://localhost:8000")
+print("Ask your questions! Type 'exit' to quit.")
+while True:
+    query = input("Your question: ")
+    if query.lower() == "exit":
+        break
+    response = query_engine.query(query)
+    print(f"\nAnswer:\n{response}\n")

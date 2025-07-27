@@ -30,3 +30,8 @@ faiss-cpu
 sentence-transformers
 numpy
 werkzeug
+Flask
+faiss-cpu
+sentence-transformers
+numpy
+gunicorn
