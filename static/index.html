@@ -2,7 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jurisprudence of Ahmed Alhasan (pbuh)</title>
+    
+    <!-- PWA Meta tags -->
+    <meta name="description" content="Islamic Jurisprudence Q&A Application">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Juris QA">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="static/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="static/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/icon-512.png">
+    <link rel="apple-touch-icon" href="static/icon-192.png">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,32 +30,55 @@
         }
 
         .container {
-            max-width: 700px;
-            margin: 50px auto;
+            max-width: 90%;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
             background-color: #ffffff;
-            padding: 30px 40px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+                margin: 50px auto;
+                padding: 30px 40px;
+            }
         }
 
         h2 {
             text-align: center;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-size: 1.5rem;
         }
 
         .disclaimer {
             text-align: center;
-            font-size: 14px;
+            font-size: 0.9rem;
             color: #555;
             margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .question-tip {
+            background-color: #e8f4fd;
+            border-left: 4px solid #1a73e8;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+            line-height: 1.4;
         }
 
         textarea {
             width: 100%;
             height: 100px;
             padding: 15px;
-            font-size: 16px;
+            font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 6px;
             resize: vertical;
@@ -47,9 +87,10 @@
 
         button {
             display: block;
+            width: 100%;
             margin: 20px auto 0;
-            padding: 12px 25px;
-            font-size: 16px;
+            padding: 12px;
+            font-size: 1rem;
             color: #fff;
             background-color: #2c3e50;
             border: none;
@@ -58,16 +99,29 @@
             transition: background-color 0.3s;
         }
 
+        @media (min-width: 480px) {
+            button {
+                width: auto;
+                padding: 12px 25px;
+            }
+        }
+
         button:hover {
             background-color: #1a252f;
         }
 
         .loading, .error, .answer-section {
             margin-top: 30px;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             background-color: #fefefe;
             box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .loading, .error, .answer-section {
+                padding: 20px;
+            }
         }
 
         .error {
@@ -80,16 +134,27 @@
             font-weight: bold;
             margin-bottom: 15px;
             color: #2c3e50;
+            font-size: 1.1rem;
         }
 
         .answer-display {
-            font-size: 17px;
+            font-size: 1rem;
             line-height: 1.6;
+        }
+
+        .answer-display p {
+            margin-bottom: 1em;
+            margin-top: 0;
+        }
+
+        .answer-display p:last-child {
+            margin-bottom: 0;
         }
 
         .answer-display a {
             color: #1a73e8;
             text-decoration: none;
+            word-break: break-all;
         }
 
         .answer-display a:hover {
@@ -98,14 +163,14 @@
 
         .source {
             margin-top: 15px;
-            font-size: 13px;
+            font-size: 0.8rem;
             color: #555;
         }
 
         .flag-image {
             display: block;
             margin: 30px auto 0;
-            max-width: 80%; /* Reduced size by 20% */
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
@@ -113,13 +178,21 @@
         .links {
             text-align: center;
             margin-top: 20px;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         .links a {
             color: #1a73e8;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 5px;
+            word-break: break-all;
+            display: inline-block;
+        }
+
+        @media (min-width: 480px) {
+            .links a {
+                margin: 0 10px;
+            }
         }
 
         .links a:hover {
@@ -132,8 +205,17 @@
         }
 
         .video-container iframe {
-            max-width: 100%;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
             border-radius: 8px;
+            max-width: 560px;
+        }
+
+        .dots {
+            display: inline-block;
+            width: 1em;
+            text-align: left;
         }
     </style>
 </head>
@@ -143,12 +225,13 @@
         <div class="disclaimer">
             Under Development: Answers may be incomplete or inaccurate. Please consult with the official jurisprudential committee at alljnahalfkheah@yahoo.com or authentic works of the Imam (pbuh), his books, or verified translations in Facebook groups for accurate jurisprudential guidance.
         </div>
+        <div class="question-tip">
+            💡 <strong>Tip:</strong> Please provide detailed and specific questions for more accurate and comprehensive answers. Include relevant context, circumstances, or specific situations when applicable.
+        </div>
         <textarea id="question" placeholder="Type your question here..."></textarea>
         <button onclick="askQuestion()">Submit</button>
         <div id="answer-content"></div>
-        <!-- Add the flag image -->
         <img src="static/flag.png" alt="Flag" class="flag-image">
-        <!-- Add clickable links -->
         <div class="links">
             <p>
                 Official Arabic Website: 
@@ -162,7 +245,7 @@
     </div>
 
     <script>
-        let dotInterval; // Global to allow clearing
+        let dotInterval;
 
         function animateDots() {
             const dotsElement = document.querySelector('.dots');
@@ -189,7 +272,7 @@
                 </div>
             `;
 
-            animateDots(); // Start the dot animation
+            animateDots();
 
             try {
                 const response = await fetch('/ask', {
@@ -198,42 +281,47 @@
                     body: JSON.stringify({ question })
                 });
 
-                clearInterval(dotInterval); // Stop animation when done
+                clearInterval(dotInterval);
 
                 if (!response.ok) {
-                    throw new Error(`Server responded with ${response.status}`);
+                    // For any server error (500, 502, 503, etc.), show maintenance message
+                    answerContent.innerHTML = `
+                        <div class="question-display">Question: ${question}</div>
+                        <div class="error">
+                            <p>🔧 <strong>The application is currently undergoing maintenance.</strong></p>
+                            <p>We apologize for the inconvenience. Please try again in a few moments.</p>
+                        </div>
+                    `;
+                    return;
                 }
 
                 const data = await response.json();
 
                 if (data.answer && data.answer !== "undefined") {
-                    // Check if the answer contains a YouTube link
                     const youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
                     const youtubeMatch = data.answer.match(youtubeRegex);
 
                     let embeddedContent = '';
 
                     if (youtubeMatch) {
-                        const videoId = youtubeMatch[1]; // Extract the video ID
+                        const videoId = youtubeMatch[1];
                         embeddedContent = `
                             <div class="video-container">
                                 <iframe 
-                                    width="560" 
-                                    height="315" 
                                     src="https://www.youtube.com/embed/${videoId}" 
                                     frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                     allowfullscreen>
                                 </iframe>
                             </div>
                         `;
                     }
 
-                    // Check if the answer contains a URL and make it clickable
-                    const clickableAnswer = data.answer.replace(
-                        /(https?:\/\/[^\s]+)/g,
-                        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
-                    );
+                    const clickableAnswer = data.answer
+                        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+                        .replace(/\n\n/g, '</p><p>')  // Convert double newlines to paragraph breaks
+                        .replace(/\n/g, '<br>')      // Convert single newlines to line breaks
+                        .replace(/^/, '<p>')         // Add opening paragraph tag
+                        .replace(/$/, '</p>');       // Add closing paragraph tag
 
                     answerContent.innerHTML = `
                         <div class="question-display">Question: ${question}</div>
@@ -251,12 +339,15 @@
                     `;
                 }
             } catch (error) {
-                clearInterval(dotInterval); // Stop animation on error
+                clearInterval(dotInterval);
                 console.error('Error:', error);
+                
+                // Show user-friendly maintenance message instead of technical error
                 answerContent.innerHTML = `
+                    <div class="question-display">Question: ${question}</div>
                     <div class="error">
-                        <p>Error retrieving answer. Please try again.</p>
-                        <small>${error.message}</small>
+                        <p>🔧 <strong>The application is currently undergoing maintenance.</strong></p>
+                        <p>We apologize for the inconvenience. Please try again later..</p>
                     </div>
                 `;
             }
@@ -267,6 +358,29 @@
                 e.preventDefault();
                 askQuestion();
             }
+        });
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/static/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // PWA Install prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install button/banner if desired
+            console.log('PWA install available');
         });
     </script>
 </body>

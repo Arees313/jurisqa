@@ -1,5 +1,20 @@
 {
     "git.ignoreLimitWarning": true,
     "python-envs.pythonProjects": [],
-    "python-envs.defaultEnvManager": "ms-python.python:venv"
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "python.defaultInterpreterPath": "",
+    "python.terminal.activateEnvironment": false,
+    "python.envFile": "",
+    "python.venvPath": "",
+    "python.condaPath": "",
+    "python.poetryPath": "",
+    "python.pipenvPath": "",
+    "python.terminal.executeInFileDir": false,
+    "python.analysis.autoSearchPaths": false,
+    "python.analysis.extraPaths": [],
+    "python.showStartPage": false,
+    "python.experiments.enabled": false,
+    "python.languageServer": "None",
+    "python-envs.autoDetect": false,
+    "python-envs.enabled": false
 }

@@ -1,0 +1,27 @@
+{
+  "name": "Jurisprudence of Ahmed Alhasan",
+  "short_name": "Juris QA",
+  "description": "Islamic Jurisprudence Q&A Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f4f8",
+  "theme_color": "#2c3e50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "religion"],
+  "lang": "en",
+  "dir": "ltr"
+}
