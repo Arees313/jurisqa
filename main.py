@@ -14,7 +14,7 @@ from watchdog.events import FileSystemEventHandler
 # -------------------------------
 # CONFIGURATION
 # -------------------------------
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = "all-mpnet-base-v2"
 EMBEDDINGS_FILE = "qa_embeddings.npy"
 FAISS_INDEX_FILE = "qa.index"
 DATA_FILE = "rag_knowledge_base.json"
