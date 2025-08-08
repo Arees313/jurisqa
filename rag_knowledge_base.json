@@ -529,7 +529,7 @@
     "id": "doc_90",
     "text": "Can a traveler fast during Ramadan? Answer: It is invalid for the traveler, who should shorten his prayer, to fast the obligatory fasting except in 3 cases:\n1- fasting 3 days instead of (slaughtering) a sacrifice (so who doesn't have a sacrifice during the Hajj and he doesn't afford it, he fasts 3 days instead while he is traveling).\n2- fasting 18 days instead of a camel to who left Arafat intentionally before Maghrib (so who left Arafat intentionally before Maghrib he must slaughter a camel as a kafarah for doing so, but if he doesn't afford a camel, he fasts 18 days in exchange, during the Hajj).\n3- The vow in the condition of traveling and not traveling (as who had a vow to fast the first week of Shaban whether he was present or traveling), in this case he must commit to his vow even if he was traveling.\nAhkam Alsharai vol.3 p.30\n----------------------------------------------------\nSo from this answer above ^^ we know that who shortens his pray for being a traveler also has to break his fast\n----------------------------------------------------\nQuestion: What is the distance required to shorten the prayer?\nAnswer: It is (44 Km) going or (44 Km) returning back, or (22 km) going and returning back so that it is (44 km) in total.",
     "source": "Fiqh | Traveling, Fasting, Distance",
-    "related_questions": ["Should traveler fast during Ramadan?", "Fasting while traveling ruling?", "Distance for shortening prayer?", "44 km travel distance rule?", "Traveler prayer and fasting rules?", "Hajj fasting exceptions for travelers?", "Vow fasting while traveling?", "Breaking fast while traveling permissible?"]
+    "related_questions": ["Should traveler fast during Ramadan?", "can i fast during ramadan while travelling?", "can i fast during ramadan while i am travelling?", "Fasting while traveling ruling?", "is it allowed to fast while traveling?", "traveler fast ramadan permissible?", "can traveler fast during ramadan?", "Distance for shortening prayer?", "44 km travel distance rule?", "Traveler prayer and fasting rules?", "Hajj fasting exceptions for travelers?", "Vow fasting while traveling?", "Breaking fast while traveling permissible?", "invalid for traveler to fast?", "traveler must break fast ramadan?", "travel fasting rules ramadan?", "fasting while travelling invalid?", "ramadan fasting travel rules?", "can I fast while on a trip?", "traveling during ramadan fasting rules?"]
   },
   {
     "id": "doc_91",
@@ -747,7 +747,7 @@
 },
 {
     "id": "doc_127",
-    "text": "Who should make up the missed fasts of a deceased person?\n\nQ. If a person dies without making up obligatory fasts such as those of Ramadan, how should they be made up by someone else on his behalf? A. His custodian (eldest son) is obligated to make up any obligatory fasts which the deceased (his parent) had missed, whether it was Ramadan or another fast (such as vows or the fast in exchange of the sacrifice of pilgrimage), regardless of the reason for the missed fast, for example due to illness or something else (such as travelling or not knowing that fasting is obligatory, etc).",
+    "text": "Who should make up the missed fasts of a deceased person?\n\nQ. If a person dies without making up obligatory fasts such as those of Ramadan, how should they be made up by someone else on his behalf? \n\nA. His custodian (eldest son) is obligated to make up any obligatory fasts which the deceased (his parent) had missed, whether it was Ramadan or another fast (such as vows or the fast in exchange of the sacrifice of pilgrimage), regardless of the reason for the missed fast, for example due to illness or something else (such as travelling or not knowing that fasting is obligatory, etc).",
     "source": "Fiqh | fasting, Ramadan, qada fasts, making up fasts, deceased obligations, Islamic inheritance, eldest son, pilgrimage, vows, Islamic rulings, jurisprudence, missed fasts",
     "related_questions": ["eldest son make up deceased fasts?", "who makes up dead parent's fasts?", "deceased Ramadan fasts obligation?", "missed fasts after death ruling?", "inheritance fasting obligations?", "qada fasts for deceased parents?", "eldest son fasting duties?", "making up dead person's fasts?"]
 },
@@ -1282,9 +1282,9 @@
 },
 {
     "id": "doc_216",
-    "text": "What is the ruling on Shrimp Scad/Slender Yellowtail Kingfish (Alepes djedaba)? Answer: Halal",
+    "text": "What is the ruling on ScadShrimp/Slender Yellowtail Kingfish (Alepes djedaba)? Answer: Halal",
     "source": "Fiqh | halal food, seafood, scad, kingfish, Alepes djedaba, tropical fish, Islamic dietary laws",
-    "related_questions": ["is scad halal?", "can I eat yellowtail kingfish?", "shrimp scad Islamic ruling?", "Alepes djedaba halal?", "slender yellowtail permissible?", "tropical scad halal status?", "is scad allowed?", "kingfish dietary law?"]
+    "related_questions": ["is scad halal?", "can I eat yellowtail kingfish?", "scad fish Islamic ruling?", "Alepes djedaba halal?", "slender yellowtail permissible?", "tropical scad halal status?", "is scad allowed?", "kingfish dietary law?"]
 },
 {
     "id": "doc_217",
@@ -2913,8 +2913,8 @@
 
 {
     "id": "doc_512",
-    "text": "Question: What is the ruling on Guitarfish/Granulated guitarfish (Rhinobatidae/Rhinobatos granulatus)? Answer: Halal - with the condition of having placoid scales",
-    "source": "Fiqh | halal food, seafood, Guitarfish, Granulated guitarfish, Rhinobatidae, Rhinobatos granulatus, tropical fish, Islamic dietary laws"
+    "text": "Question: What is the ruling on Guitarfish/Granulated guitarfish? Answer: Halal - with the condition of having placoid scales",
+    "source": "Fiqh | halal food, seafood, Guitarfish, Granulated guitarfish, tropical fish, Islamic dietary laws"
 },
 
 {
@@ -3452,8 +3452,8 @@
 
 {
     "id": "doc_603",
-    "text": "Question: What is the ruling on Pink shrimp (Trachypenaeus curvirostris)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, shrimp, Trachypenaeus, Islamic dietary laws",
+    "text": "Question: What is the ruling on Pink shrimp (Trachypenaeus curvirostris)? Can I eat shrimp? Answer: Halal. Shrimp is permissible to eat according to Islamic dietary laws. All types of shrimp are considered halal seafood.",
+    "source": "Fiqh | halal food, seafood, shrimp, prawn, Trachypenaeus, marine crustaceans, Islamic dietary laws",
     "related_questions": [
         "Is shrimp halal?",
         "Can I eat shrimp?",
@@ -3462,7 +3462,14 @@
         "Shrimp halal or haram?",
         "Can Muslims eat shrimp?",
         "Is pink shrimp halal?",
-        "Shrimp ruling Islam"
+        "Shrimp ruling Islam",
+        "are prawns halal?",
+        "can I eat prawns?",
+        "shrimp permissible Islam?",
+        "crustaceans halal?",
+        "seafood shrimp halal?",
+        "eating shrimp allowed?",
+        "shrimp Islamic law?"
     ]
 },
 
@@ -3509,8 +3516,9 @@
 
 {
     "id": "doc_611",
-    "text": "Question: What is the ruling on Starfish (Asteroidea)? Answer: Haram - forbidden to eat",
-    "source": "Fiqh | halal food, seafood, starfish, Asteroidea, Islamic dietary laws"
+    "text": "Question: What is the ruling on Starfish (Asteroidea)? Answer: Haram - forbidden to eat. Starfish are marine echinoderms, not fish, and are prohibited.",
+    "source": "Fiqh | halal food, seafood, starfish, Asteroidea, echinoderms, marine animals, Islamic dietary laws",
+    "related_questions": ["is starfish halal?", "can I eat starfish?", "starfish halal or haram?", "starfish ruling Islam?", "are starfish allowed?", "starfish echinoderm halal?", "sea star halal?", "asteroidea halal?", "marine starfish halal?", "starfish not fish"]
 },
 
 {
@@ -4159,8 +4167,9 @@
 
 {
     "id": "doc_701",
-    "text": "Question: What is the ruling on Indian rhinoceros (Rhinoceros unicornis)? Answer: Haram - forbidden to eat",
-    "source": "Fiqh | halal food, land animals, rhinoceros, Rhino, Islamic dietary laws"
+    "text": "Question: What is the ruling on Indian rhinoceros? Answer: Haram - forbidden to eat",
+    "source": "Fiqh | halal food, land animals, rhinoceros, Rhino, Islamic dietary laws",
+    "related_questions": ["is rhino halal?", "is rhinoceros halal?", "can I eat rhino?", "can I eat rhinoceros?", "rhino haram or halal?", "rhinoceros haram or halal?", "Indian rhinoceros halal?", "rhino Islamic ruling?", "rhinoceros Islamic ruling?", "is rhino allowed?", "is rhinoceros allowed?", "rhino dietary law?", "rhinoceros dietary law?", "rhino permissible?", "rhinoceros permissible?", "rhino forbidden?", "rhinoceros forbidden?", "rhino meat halal?", "rhinoceros meat halal?", "rhino haram?", "rhinoceros haram?", "rhino horn halal?", "rhinoceros horn halal?", "eating rhino allowed?", "eating rhinoceros allowed?", "rhino consumption halal?", "rhinoceros consumption halal?", "is rhino meat allowed?", "is rhinoceros meat allowed?", "rhino food ruling?", "rhinoceros food ruling?", "can Muslims eat rhino?", "can Muslims eat rhinoceros?", "rhino in Islam?", "rhinoceros in Islam?", "rhino meat haram?", "rhinoceros meat haram?", "white rhino halal?", "black rhino halal?", "African rhino halal?", "Asian rhino halal?", "rhino species halal?", "rhinoceros species halal?", "wild rhino halal?", "domesticated rhino halal?", "rhino hunting halal?", "rhinoceros hunting halal?", "rhino slaughter halal?", "rhinoceros slaughter halal?", "large mammals halal?", "wild animals halal?", "herbivore rhino halal?", "plant eating rhino halal?"]
 },
 {
     "id": "doc_702",
@@ -4916,9 +4925,9 @@
 
 {
     "id": "doc_821",
-    "text": "What is the ruling on Tapaculo (Rhinocryptidae)? Answer: Halal",
-    "source": "Fiqh | halal food, tapaculo, Rhinocryptidae, passerines, Islamic dietary laws",
-    "related_questions": ["is tapaculo halal?", "can I eat tapaculo?", "tapaculo bird Islamic ruling?", "Rhinocryptidae halal?", "tapaculo permissible?", "ground birds halal status?", "is tapaculo allowed?", "tapaculo dietary law?"]
+    "text": "What is the ruling on Tapaculo? Answer: Halal",
+    "source": "Fiqh | halal food, tapaculo, passerines, Islamic dietary laws",
+    "related_questions": ["is tapaculo halal?", "can I eat tapaculo?", "tapaculo bird Islamic ruling?", "tapaculo permissible?", "ground birds halal status?", "is tapaculo allowed?", "tapaculo dietary law?"]
 },
 
 {
@@ -6052,8 +6061,8 @@
   },
   {
     "id": "doc_1024",
-    "text": "Question: What is the ruling on Granulated guitarfish (Rhinobatos granulatus)? Answer: Halal",
-    "source": "Fiqh | halal food, guitarfish, Rhinobatos granulatus, marine fish, Islamic dietary laws"
+    "text": "Question: What is the ruling on Granulated guitarfish? Answer: Halal",
+    "source": "Fiqh | halal food, guitarfish, marine fish, Islamic dietary laws"
   },
   {
   "id": "doc_1025",
@@ -6174,8 +6183,9 @@
 
 {
     "id": "doc_1045",
-    "text": "Question: What is the ruling on Elephantfish/Bottle nose (Mormyrus kannume)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Elephantfish, Bottle nose, Mormyrus kannume, freshwater fish, Islamic dietary laws"
+    "text": "Question: What is the ruling on Elephantfish/Bottle nose (Mormyrus kannume)? Can I eat elephantfish? Answer: Halal. Elephantfish are actual fish species and are permissible to eat according to Islamic law.",
+    "source": "Fiqh | halal food, seafood, Elephantfish, Bottle nose, Mormyrus kannume, freshwater fish, actual fish, Islamic dietary laws",
+    "related_questions": ["is elephantfish halal?", "can I eat elephantfish?", "elephantfish bottle nose halal?", "mormyrus kannume halal?", "freshwater elephantfish halal?", "bottle nose fish halal?", "elephantfish seafood halal?", "african elephantfish halal?", "mormyridae fish halal?", "elephantfish consumption halal?", "eating elephantfish allowed?", "elephantfish actual fish", "elephantfish real fish", "elephantfish not starfish", "elephant fish halal"]
 },
 
 {
@@ -6503,8 +6513,8 @@
 
 {
     "id": "doc_1100",
-    "text": "Question: What is the ruling on Shrimp Scad (Alepes djedaba)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Shrimp Scad, Alepes djedaba, marine fish, Islamic dietary laws"
+    "text": "Question: What is the ruling on Scad (Alepes djedaba)? Answer: Halal",
+    "source": "Fiqh | halal food, seafood, Scad, Alepes djedaba, marine fish, Islamic dietary laws"
 },
 
 {
@@ -7034,7 +7044,8 @@
 {
     "id": "doc_1192",
     "text": "Question: What is the ruling on Elephantfish/Bottle Nose (Mormyridae, Mormyrus niloticus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Elephantfish, Mormyridae, freshwater fish, Islamic dietary laws"
+    "source": "Fiqh | halal food, seafood, Elephantfish, Mormyridae, freshwater fish, Islamic dietary laws",
+    "related_questions": ["is elephantfish halal?", "bottle nose elephantfish halal?", "mormyrus niloticus halal?", "nile elephantfish halal?", "freshwater elephantfish halal?", "elephantfish mormyridae halal?", "african fish halal?", "river elephantfish halal?", "elephantfish seafood halal?", "eating elephantfish allowed?"]
 },
 {
     "id": "doc_1193",
@@ -8319,6 +8330,7 @@
     "text": "Question 43: Is it forbidden for who has a tatoo to become an Imam for Salat? Answer: Not Haram. v.3 Answers on Jurisprudence",
     "source": "Prayer and Ritual Acts | tattoo imam salat, tattoo prayer leadership, imam with tattoo, prayer leader tattoo forbidden, tattoo not haram imam, salat leadership tattoo, v.3 Answers on Jurisprudence",
     "related_questions": ["tattoo imam for salat forbidden?", "can person with tattoo lead prayer?", "tattoo prayer leadership allowed?", "imam with tattoo permissible?", "tattoo forbidden imam salat?", "prayer leader with tattoo?", "tattoo not haram for imam?", "salat leadership with tattoo?", "can tattooed person be imam?", "tattoo imam prayer ruling?", "prayer leadership tattoo restriction?", "imam tattoo Islamic ruling?", "tattoo prayer leader allowed?", "salat imam with tattoo?", "tattoo imam permissible Islam?", "prayer leader tattoo forbidden?", "imam with tattoo not haram?", "tattoo salat leadership ruling?", "can imam have tattoo?", "tattoo prayer imam allowed?"]
+
 },
 {
     "id": "doc_1408",
@@ -8934,7 +8946,7 @@
 },
 {
     "id": "doc_1511",
-    "text": "There are medicines which can be swallowed without drinking water such as small pills and the like. Do they void the fast?\n\nSwallowing pills voids the fast.",
+    "text": "There are medicines which can be swallowed without drinking water such as small pills and the like. Do they void the fast?\n\nAnswer: Swallowing pills voids the fast.",
     "source": "Fasting and Ramadan | medicines swallowed without water, small pills and like, swallowing pills voids fast, medication pills forbidden",
     "related_questions": ["medicines swallowed without water?", "small pills void fast?", "swallowing pills voids fast?", "medication pills forbidden fasting?", "pills without water void?", "small pills fasting void?", "medicine pills swallowing fast?", "pills swallowing breaks fast?", "medication without water void?", "small medicine pills fast?", "pills oral medication void?", "swallowing medicine pills fast?", "pills medication void fast?", "medicine pills fasting forbidden?", "oral pills void fast?", "small medication pills void?", "pills swallowing fasting breaks?", "medicine pills oral void?", "pills without water breaks?", "medication pills swallowing void?"]
 },
@@ -9198,9 +9210,9 @@
 },
 {
     "id": "doc_1555",
-    "text": "Is it permissible to fast the favored days while travelling?\n\nIt is permissible except fasting in the month of Ramadan.",
+    "text": "Is it permissible to fast the favored days while travelling?\n\nIt is permissible except fasting in the month of Ramadan(Meaning travelers must not fast during the month of Ramadan).",
     "source": "Fasting and Ramadan | permissible fast favored days travelling, permissible except Ramadan month, favored fasting travel allowed, Ramadan travel not allowed",
-    "related_questions": ["permissible fast favored days travelling?", "permissible except Ramadan month?", "favored fasting travel allowed?", "Ramadan travel not allowed?", "favored days fast travel?", "travel favored fast permissible?", "favored fasting while travelling?", "travel fast favored days?", "favored fast travel allowed?", "travelling favored days fast?", "permissible favored travel fast?", "favored days travelling fast?", "travel favored fasting allowed?", "favored fast while travel?", "travelling fast favored days?", "permissible travel favored fast?", "favored days fast travelling?", "travel fast favored allowed?", "favored fasting travel permissible?", "travelling favored fast allowed?"]
+    "related_questions": ["permissible fast favored days travelling?", "can i fast during ramadan while travelling?", "ramadan fasting while traveling forbidden?", "traveling during ramadan fast not allowed?", "is fasting forbidden while traveling ramadan?", "can travelers fast during ramadan?", "ramadan travel fasting prohibited?", "permissible except Ramadan month?", "favored fasting travel allowed?", "Ramadan travel not allowed?", "favored days fast travel?", "travel favored fast permissible?", "favored fasting while travelling?", "travel fast favored days?", "favored fast travel allowed?", "travelling favored days fast?", "permissible favored travel fast?", "favored days travelling fast?", "travel favored fasting allowed?", "favored fast while travel?"]
 },
 {
     "id": "doc_1556",
@@ -9924,7 +9936,7 @@
 },
 {
     "id": "doc_1690",
-    "text": "As for those who are obligated to complete their prayers during travel32, do they fast in their travel?\n\nThey are obligated to fast.",
+    "text": "As for those who are obligated to complete their prayers during travel, do they fast in their travel?\n\nThey are obligated to fast.",
     "source": "Fasting and Ramadan | obligated complete prayers during travel fast in travel, obligated to fast",
     "related_questions": ["obligated complete prayers during travel fast?", "obligated to fast complete prayers travel?", "complete obligated prayers during fast travel?", "prayers complete obligated during travel fast?", "during complete obligated prayers travel fast?", "fast obligated complete prayers during travel?", "obligated prayers complete during travel fast?", "complete during obligated prayers fast travel?", "prayers during complete obligated travel fast?", "during obligated complete prayers fast travel?", "fast complete obligated prayers travel during?", "obligated during prayers complete travel fast?", "complete prayers obligated during fast travel?", "prayers obligated complete during fast travel?", "during prayers obligated complete fast travel?", "fast during obligated complete prayers travel?", "obligated complete during prayers travel fast?", "complete obligated during prayers fast travel?", "prayers complete during obligated fast travel?", "during complete prayers obligated travel fast?"]
 },
@@ -10047,5 +10059,68 @@
     "text": "What if the deceased had no custodian or the eldest child was a female? What is the verdict?\n\nIn this case, there is no obligation to make compensation on his behalf. And (3/4 Kg) of food, paid for from the money of the deceased, has to be donated for each missed day of fasting.",
     "source": "Fasting and Ramadan | deceased no custodian eldest child female, no obligation compensation behalf, food paid money deceased donated missed day fasting",
     "related_questions": ["deceased no custodian eldest child?", "no obligation compensation behalf deceased?", "food paid money deceased donated?", "no deceased custodian child eldest?", "obligation no compensation deceased behalf?", "paid food money donated deceased?", "custodian no deceased eldest child?", "no compensation obligation behalf deceased?", "food money paid deceased donated?", "deceased custodian no child eldest?", "compensation no obligation deceased behalf?", "money food paid donated deceased?", "no child deceased custodian eldest?", "no behalf obligation compensation deceased?", "paid deceased food money donated?", "custodian deceased no eldest child?", "obligation compensation no deceased behalf?", "food donated paid money deceased?", "child no deceased eldest custodian?", "no deceased obligation compensation behalf?"]
+},
+{
+    "id": "doc_1654",
+    "text": "Question: What are the rules for frequent travelers regarding prayer and fasting? Answer: Sayed Ahmed Al-Hasan pbuh: The issue for the one who travels a lot, I have explained in detail and you can return to it and make sure about your situation on whether you travel a lot or not. Therefore, you shall act upon what you are accountable of and this issue I will transmit for you from the book of Sharaye so that it can be easy for you to apply to your situation \"The fifth condition: That his travelling musn't be more than his residence like the bedouin(nomad) that requests rain, the Makari(those who work to receive fares for using their animals as public transport for others or for transporting, carrying luggage), sailors, the merchant that looks for markets and the postman. The rule stipulated for him[the traveller] is: If his travel was 4 days in a week or 16 days in a month or 6 months and a day in a year continuously, he will complete[his prayers] and will fast throughout his travel. He will start with completing[his prayers] and fasting whenever he knows about his situation even if it be the first day of his travel.\" Sharaye Al-Islam page 75",
+    "source": "Travel and Prayer Rules | frequent travelers prayer fasting, fifth condition traveling, bedouin nomad Makari sailors merchant postman, 4 days week 16 days month 6 months year continuously, complete prayers fast travel, Sharaye Al-Islam page 75, Sayed Ahmed Al-Hasan",
+    "related_questions": ["frequent travelers prayer and fasting rules?", "fifth condition for traveling?", "4 days in a week travel rule?", "16 days in a month travel ruling?", "6 months and a day in year travel?", "bedouin nomad travel prayer rules?", "Makari transporters prayer fasting?", "sailors merchants postman travel rules?", "complete prayers during frequent travel?", "fast during continuous travel?", "traveling more than residence rules?", "when to complete prayers while traveling?", "frequent travel fasting obligations?", "Sharaye Al-Islam travel rules?", "continuous travel prayer completion?", "nomadic workers prayer rules?", "transport workers fasting rules?", "merchants travel prayer obligations?", "postman travel fasting rules?", "first day of travel prayer rules?"]
+},
+{
+    "id": "doc_1655",
+    "text": "Question: What is the ruling if he increased and went above the total distance that he traveled from the distance required to shorten prayers, does he shorten his prayers? Answer: If he returned and the distance (to shorten prayers) was complete and increased over (the said distance) he shall shorten his prayers, and if he didn't he won't. In the above example(whoever traveled the distance on his return, 24 kms) he will not shorten his prayers. However, if the total distance that he traveled was 44 kms or more (such as if he wants to visit a school that is far from his place of residence, 20 kms, and then when he reached it he decided to visit another school that is 15 kms apart - then he decided to visit a third one which is 10 kms apart, the total distance will be 45 kms). Such a person if he wants to return back to his house, he will need to shorten his prayers because the Sharia distance had been fulfilled.",
+    "source": "Travel and Prayer Rules | increased above total distance traveled, distance required shorten prayers, complete distance increased over, 24 kms travel distance return, 44 kms or more total distance, visit schools 20 kms 15 kms 10 kms, 45 kms total distance, Sharia distance fulfilled, prayer shortening rules",
+    "related_questions": ["increased above total distance traveled prayer shortening?", "distance required to shorten prayers exceeded?", "complete distance increased over shorten prayers?", "24 kms travel distance return prayer rules?", "44 kms or more total distance prayer?", "visit multiple schools travel distance prayer?", "20 kms 15 kms 10 kms travel prayer?", "45 kms total distance prayer shortening?", "Sharia distance fulfilled prayer rules?", "return journey prayer shortening rules?", "multiple destinations travel prayer rules?", "cumulative travel distance prayer shortening?", "exceed minimum distance prayer shortening?", "total travel distance calculation prayer?", "visiting schools prayer shortening rules?", "return trip prayer obligations?", "accumulated travel distance prayer rules?", "minimum distance exceeded prayer shortening?", "multiple stops travel prayer rules?", "combined travel distance prayer shortening?", "sequential visits travel prayer rules?", "total journey distance prayer obligations?", "exceeded required distance prayer shortening?", "multiple destinations prayer shortening rules?", "cumulative distance travel prayer rules?"]
+},
+{
+    "id": "doc_1656",
+    "text": "Question 48/What is the ruling for unnecessary travel during the month of Ramathan which requires that the one fasting to break his fast? Answer: Permissible, and its better to avoid it. Answers on Jurisprudence v.3",
+    "source": "Fasting and Ramadan | unnecessary travel month Ramadan, requires fasting break fast, permissible better avoid, Answers on Jurisprudence v.3",
+    "related_questions": ["unnecessary travel during Ramadan fasting?", "travel during Ramadan break fast ruling?", "permissible travel Ramadan fasting?", "better to avoid travel Ramadan?", "month of Ramadan travel fasting rules?", "break fast during travel Ramadan?", "unnecessary travel Ramadan permissible?", "avoid travel during Ramadan fasting?", "Ramadan travel break fast allowed?", "fasting travel Ramadan month ruling?", "travel requires break fast Ramadan?", "permissible unnecessary travel Ramadan?", "Ramadan fasting travel permissible?", "break fast travel Ramadan ruling?", "avoid unnecessary travel Ramadan?", "travel during fasting month Ramadan?", "Ramadan travel fasting obligations?", "unnecessary travel break fast Ramadan?", "permissible travel month Ramadan?", "better avoid travel Ramadan fasting?", "Ramadan unnecessary travel ruling?", "travel break fast month Ramadan?", "fasting break travel Ramadan permissible?", "avoid travel Ramadan fasting month?", "unnecessary Ramadan travel permissible?"]
+},
+{
+    "id": "doc_1657",
+    "text": "Question: How do I pray while travelling? How to pray shortened prayer (qasr/qsr)? Answer: When you are travelling and meet the required distance (44 km total), you should shorten your prayers (qasr/qsr) as follows: Fajr prayer remains the same (2 rakaat). Duhr prayer is shortened from 4 rakaat to 2 rakaat and is prayed in the same way as Fajr. Asr prayer is also shortened from 4 rakaat to 2 rakaat. Maghreb prayer stays as it is (3 rakaat - no change). Isha prayer is shortened from 4 rakaat to 2 rakaat. The shortened prayers (Duhr, Asr, and Isha) are performed exactly like Fajr prayer - just 2 rakaat with the same recitation and movements.",
+    "source": "Travel and Prayer Rules | how pray while travelling, shortened prayer qasr qsr method, Fajr 2 rakaat same, Duhr 4 to 2 rakaat, Asr 4 to 2 rakaat, Maghreb 3 rakaat no change, Isha 4 to 2 rakaat, 44 km distance requirement",
+    "related_questions": ["qasr salat guide?", "qasr salat instructions?", "qasr salat during travel?", "how to pray qasr?", "how to do shortened prayer while travelling?", "qasr namaz method?", "qasr prayer how to do?", "qasr prayer method?", "qasr prayer steps?", "qasr salat steps?", "qasr salat procedure?", "qasr salat method?", "how to perform qasr salat?", "how to do qasr salat?","how to pray while travelling?", "if i am travelling how do i perform my prayers?", "how do i perform my prayers while travelling?", "how to perform prayers during travel?", "how do i pray when travelling?", "how to pray shortened prayer qasr?", "how to pray shortened prayer qsr?", "qasr prayer during travel?", "qsr prayer during travel?", "prayer shortening during travel?", "performing prayers while travelling?", "travel prayer performance?", "how perform prayers travelling?", "prayer method while travelling?", "travelling prayer procedure?", "Fajr prayer while travelling?", "Duhr prayer shortened travel?", "Asr prayer shortened travel?", "Maghreb prayer during travel?", "Isha prayer shortened travel?", "2 rakaat travel prayers?", "4 rakaat to 2 rakaat travel?", "travel prayer method?", "shortened prayer procedure?", "qasr prayer method?", "qsr prayer method?", "how many rakaat travel prayer?", "travel prayer rakaat count?", "pray like Fajr during travel?", "shortened Duhr Asr Isha prayer?", "travel prayer guidelines?", "prayer shortening rules travel?", "44 km travel prayer shortening?", "travel distance prayer shortening?", "shortened prayer during journey?", "travel prayer obligations?", "how perform travel prayers?", "travel prayer methodology?", "prayer rakaat reduction travel?", "qasr prayer while travelling?", "qsr prayer while travelling?", "what is qasr prayer?", "what is qsr prayer?", "qasr prayer rules?", "qsr prayer rules?", "perform prayers when traveling?", "prayers during travel how?", "travelling prayers method?"]
+},
+{
+    "id": "doc_1658",
+    "text": "Question: What is the distance required to shorten prayers (qasr/qsr) and when should I shorten them? Answer: The distance required to shorten prayers (qasr/qsr) is 44 kilometers total. This can be: (1) 44 km going in one direction, OR (2) 44 km returning back, OR (3) 22 km going and 22 km returning back (totaling 44 km). When you travel multiple destinations and the total distance is 44 km or more, you should shorten your prayers (qasr/qsr). For example: if you visit a school 20 km away, then another school 15 km away, then a third school 10 km away (total = 45 km), you should shorten your prayers because the Sharia distance of 44 km has been fulfilled. However, if your total travel distance is less than 44 km (like a 24 km return trip), you should pray full prayers, not shortened ones (qasr/qsr).",
+    "source": "Travel and Prayer Rules | distance required shorten prayers qasr qsr, 44 kilometers total distance, 44 km one direction, 22 km going returning, multiple destinations total distance, Sharia distance 44 km fulfilled, less than 44 km full prayers",
+    "related_questions": ["what distance required shorten prayers?", "qasr prayer distance requirements?", "qsr prayer distance requirements?", "44 km travel prayer shortening?", "22 km going returning prayer?", "multiple destinations prayer distance?", "total travel distance prayer shortening?", "Sharia distance 44 km prayer?", "when should I shorten prayers?", "qasr prayer when to perform?", "qsr prayer when to perform?", "travel distance calculation prayer?", "44 kilometers prayer shortening rule?", "one direction 44 km prayer?", "return trip prayer distance?", "cumulative travel distance prayer?", "minimum distance prayer shortening?", "travel distance requirements prayer?", "44 km total distance prayer?", "multiple stops prayer distance?", "prayer shortening distance rules?", "travel distance threshold prayer?", "when to shorten travel prayers?", "distance calculation travel prayer?", "prayer shortening criteria distance?", "travel prayer distance guidelines?", "44 km rule prayer shortening?", "travel distance prayer obligations?", "minimum travel distance prayer?", "qasr prayer distance rules?", "qsr prayer distance rules?", "when to perform qasr?", "when to perform qsr?", "qasr prayer criteria?", "qsr prayer criteria?"]
+},
+{
+    "id": "doc_1659",
+    "text": "Question: How to recite Ayat al Kursi? \n\n Answer: Here is Ayat al Kursi as taught by Ahlulbayt pbut https://www.youtube.com/watch?v=IPQ9AjVop1o",
+    "source": "Travel and Prayer Rules | distance required shorten prayers qasr qsr, 44 kilometers total distance, 44 km one direction, 22 km going returning, multiple destinations total distance, Sharia distance 44 km fulfilled, less than 44 km full prayers",
+    "related_questions": ["How to read Ayat al Kursi"]
+},
+{
+    "id": "doc_1659",
+    "text": "Question: What is the ruling for tattooing a part of the body? Also what's the ruling for tattooing the eyebrows that is done nowadays? And the tattoo that is on the body or eyebrows is basically done through poking by the needle in a certain way so that a lot of blood comes out and it will leave like a wound and it will remain there and it won't come out - and shapes of birds, individuals and flowers can be made.\n\nImam Ahmed Al Hasan pbuh: 'Tattoos on the place of the eyebrows for a certain reason is permissible like hairlessness or having a little bit of hair. As for tattooing animal pictures and others, it is not permissible.'",
+    "source": "Answers on Jurisprudence volume 1 | tattooing body, tattooing eyebrows, animal pictures tattoo, Imam Ahmed Al Hasan, Islamic ruling, poking needle, wound, birds, individuals, flowers, hairlessness, eyebrow tattoo permissible, body tattoo not permissible",
+    "related_questions": [
+        "tattooing body Islamic ruling?",
+        "tattooing eyebrows allowed?",
+        "tattooing animal pictures permissible?",
+        "tattooing birds or flowers Islam?",
+        "tattooing for hairlessness eyebrows?",
+        "tattooing shapes on body Islam?",
+        "tattooing individuals images Islam?",
+        "tattooing wound needle ruling?",
+        "tattooing eyebrows for little hair?",
+        "tattooing eyebrows medical reason?",
+        "tattooing not coming out ruling?",
+        "tattooing eyebrows nowadays Islam?",
+        "tattooing animal images Islam?",
+        "tattooing flowers on body Islam?",
+        "tattooing birds on body Islam?",
+        "tattooing eyebrows Imam Ahmed Al Hasan?",
+        "tattooing body Imam Ahmed Al Hasan?",
+        "tattooing permissible reasons?",
+        "tattooing forbidden reasons?",
+        "tattooing wound blood ruling?"
+    ]
 }
 ]
