@@ -7,9 +7,9 @@
 },
 {
 "id": "doc_1",
-"text": "How do I pray? How to pray? Please refer to this authentic demonstration on how to do prayer/salat: https://www.youtube.com/watch?v=SNq2PcY56OQ",
+"text": "How do I pray? How to pray? Please refer to this authentic demonstration on how to do prayer/salat: https://www.youtube.com/watch?v=SNq2PcY56OQ  \n\n What time is the 5 prayers? \n https://praytime-almahdyoon.com/\n You can find answer on what time to pray using this official prayer time, remember to type in your location.",
 "source": "Prayer and Ritual Acts | prayer, salah, daily prayers, obligatory, islamic pillars, salat",
-"related_questions": ["how do I pray?", "how to pray?", "prayer tutorial", "salat demonstration", "how to perform salah?", "prayer instructions", "how to do namaz?"]
+"related_questions": ["what are the five daily prayers?", "how many prayers per day?", "five obligatory prayers names?", "Fajr Dhuhr Asr Maghrib Isha times?", "daily salah schedule?", "prayer times Islam?", "obligatory prayers per day?", "five pillars prayer times?", "what's the time to pray?", "what time is prayer?", "when do I pray?", "when is prayer?", "prayer schedule", "salat time", "salah time", "namaz time", "when to pray?", "when should I pray?", "what are prayer times?", "Islamic prayer times?", "Muslim prayer times?", "what time do Muslims pray?", "what time is salat?", "what time is salah?", "what time is namaz?" ]
 },
 {
 "id": "doc_2",
@@ -88,6 +88,7 @@
 "text": "There are six conditions (ahdath) that invalidate wudu/ablution: \n\n1. Discharge of urine, excrement, and passing wind from the usual place. If the excrement comes out from the small intestines, it does not break ablution. If it comes from the large intestines, it does. \n2. If the makhraj (outlet) is not in the usual place and discharges excrement, it breaks ablution. The same rule applies if it becomes a habitual outlet due to injury. \n3. Sleep that overtakes the senses invalidates ablution. This includes fainting, madness, intoxication, and minor menstruation (istihādah). \n4. Discharge of madhy, wadhy (waddy), or blood — even from the two outlets — does not invalidate ablution, except for the three types of blood: haydh (menstruation), nifās (postnatal bleeding), and istihādah. \n5. These do NOT invalidate: Vomiting, mucus (nukhamah), nail cutting, hair shaving, or touching private parts, the buttocks, or a strange woman do not invalidate ablution. \n6. Eating food touched by fire, or anything exiting the two outlets unless mixed with impurities, does NOT invalidate ablution.",
 "source": "Ablution and Purification | wudhu, ablution, fiqh, hadath, invalidators, purity",
 "related_questions": [
+    "what breaks my wudu",
             "what invalidates wudu?",
             "what invalidates ablution?",
             "what breaks wudu?",
@@ -10230,362 +10231,384 @@
         "Tayammum in Islam?"
     ]
 }
-    ,
-    {
-        "id": "doc_1661",
-        "text": "When is Wudu (ablution) obligatory?\n\nWuḍūʾ is obligatory for:\n1. Prayer, whether obligatory or recommended (except for funeral prayer).\n2. Touching the script of the Qurʾān.\n3. Circumambulating the Kaʿbah. \n\n It is also recommended for: \n1. Sleeping in a state of purity. \nRenewing wuḍūʾ for each prayer, even if one remains pure. \nBefore reciting Qurʾān or ḥadīth.",
-        "source": "Ablution and Purification | wudu, ablution, obligatory, prayer, Quran, tawaf, Islamic rulings",
-        "related_questions": [
-            "When is wudu obligatory?",
-            "When do I have to do wudu?",
-            "When must I perform ablution?",
-            "When is ablution required?",
-            "Is wudu required for prayer?",
-            "Is wudu required for touching Quran?",
-            "Is wudu required for tawaf?",
-            "Do I need wudu for recommended prayers?",
-            "Do I need wudu for funeral prayer?",
-            "Is wudu obligatory for all prayers?",
-            "Is ablution needed for Quran?",
-            "Is ablution needed for circumambulating Kaaba?",
-            "When is ablution compulsory?",
-            "When is wudu compulsory?",
-            "What acts require wudu?",
-            "What acts require ablution?",
-            "Wudu for Quran?",
-            "Wudu for tawaf?",
-            "Wudu for recommended prayer?",
-            "Wudu for funeral prayer?"
-        ]
-    },
-    {
-        "id": "doc_1662",
-        "text": "Can I touch Quran without wuduu (ablution)?\n\nWuḍūʾ is obligatory for:\nPrayer, whether obligatory or recommended (except for funeral prayer).\nTouching the script of the Qurʾān.\nCircumambulating the Kaʿbah.",
-        "source": "Ablution and Purification | wudu, ablution, Quran, touching Quran, obligatory, Islamic rulings",
-        "related_questions": [
-            "Can I touch Quran without wudu?",
-            "Can I touch Quran without ablution?",
-            "Is wudu required to touch Quran?",
-            "Is ablution required to touch Quran?",
-            "Do I need wudu to touch Quran?",
-            "Do I need ablution to touch Quran?",
-            "Can I hold Quran without wudu?",
-            "Can I hold Quran without ablution?",
-            "Is it allowed to touch Quran without wudu?",
-            "Is it allowed to touch Quran without ablution?",
-            "Touching Quran without wudu?",
-            "Touching Quran without ablution?",
-            "Is wudu obligatory for touching Quran?",
-            "Is ablution obligatory for touching Quran?",
-            "Do I need to be pure to touch Quran?",
-            "Can I touch Quran if I don't have wudu?",
-            "Can I touch Quran if I don't have ablution?",
-            "Quran touching rules wudu?",
-            "Quran touching rules ablution?",
-            "Is it haram to touch Quran without wudu?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1663",
-        "text": "When is wudu (ablution) recommended?\n\nIt is also recommended for:\n1. Sleeping in a state of purity.\n2. Renewing wuḍūʾ for each prayer, even if one remains pure.\n3. Before reciting Qurʾān or ḥadīth.",
-        "source": "Ablution and Purification | wudu, ablution, recommended, mustahab, purity, prayer, Quran, hadith, Islamic rulings",
-        "related_questions": [
-            "When is wudu recommended?",
-            "When is ablution recommended?",
-            "Is wudu mustahab?",
-            "Is ablution mustahab?",
-            "When should I do wudu even if not obligatory?",
-            "Should I renew wudu for each prayer?",
-            "Is it recommended to sleep with wudu?",
-            "Is it recommended to have wudu before sleep?",
-            "Is wudu recommended before reciting Quran?",
-            "Is wudu recommended before reciting hadith?",
-            "Wudu for sleeping?",
-            "Wudu for Quran recitation?",
-            "Wudu for hadith recitation?",
-            "Renewing wudu for each prayer?",
-            "Mustahab acts of wudu?",
-            "Recommended times for ablution?",
-            "When is it good to do wudu?",
-            "Benefits of sleeping with wudu?",
-            "Why renew wudu for each prayer?",
-            "Is wudu needed before reading hadith?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1664",
-        "text": "When is ghusul (purification) needed/obligatory?\n\nGhusl is obligatory for:\n\nJanābah: Caused by sexual intercourse or ejaculation.\n\nMenstruation (Ḥayḍ).\n\nPostnatal bleeding (Nifās).\n\nTouching a corpse (after it has cooled).\n\nRitual washing of the dead (for the one performing it, after completion).\n\nIstihāḍa (irregular bleeding), in certain forms.\n\nFriday bath (for those attending Friday prayer – recommended by many, obligatory according to some).\n\nMethod:\nThere are two valid ways:\n\nSequential (tartībī): Wash the head and neck, then the right side of the body, then the left.\n\nImmersive (irtimāsī): Submerging the entire body in water at once.\n\nAll ghusl types have the same method, but the intention (niyyah) changes according to the cause.\n\nGhusl from janābah removes the need for wuḍūʾ, whereas ghusl from other causes requires wuḍūʾ afterward unless combined by intention.",
-        "source": "Ablution and Purification | ghusl, ritual bath, purification, janabah, menstruation, postnatal bleeding, corpse, washing dead, istihada, Friday bath, method, Islamic rulings",
-        "related_questions": [
-            "When is ghusl obligatory?",
-            "When is ghusl required?",
-            "When do I need to do ghusl?",
-            "When is purification bath needed?",
-            "What are the causes for ghusl?",
-            "What makes ghusl obligatory?",
-            "When is ritual bath required?",
-            "What are the types of ghusl?",
-            "How to do ghusl?",
-            "What is the method of ghusl?",
-            "What is tartibi ghusl?",
-            "What is irtimasi ghusl?",
-            "What is janabah?",
-            "When is ghusl janabah required?",
-            "Is ghusl required after menstruation?",
-            "Is ghusl required after childbirth?",
-            "Is ghusl required after touching a corpse?",
-            "Is ghusl required after washing the dead?",
-            "Is ghusl required for istihada?",
-            "Is Friday ghusl obligatory?",
-            "Is Friday bath recommended?",
-            "Does ghusl replace wudu?",
-            "Do I need wudu after ghusl?",
-            "Ghusl vs wudu?",
-            "What is the difference between ghusl and wudu?",
-            "What is the intention for ghusl?",
-            "How to perform ghusl for janabah?",
-            "How to perform ghusl for menstruation?",
-            "How to perform ghusl for Friday?",
-            "What invalidates ghusl?",
-            "What breaks ghusl?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1665",
-        "text": "Can I pray during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
-        "source": "Menstruation | prayer, fasting, mosque, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
-        "related_questions": [
-            "Can I pray during menstruation?",
-            "Is prayer allowed during menstruation?",
-            "Can women pray while on period?",
-            "Is salah valid during menstruation?",
-            "Can I perform salat during menstruation?",
-            "Prayer rules for menstruating women?",
-            "Can I pray if I am on my period?",
-            "Is it haram to pray during menstruation?",
-            "Menstruation and prayer in Islam?",
-            "What to do about missed prayers during menstruation?"
-        ]
-    },
-    {
-        "id": "doc_1666",
-        "text": "Can I fast during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
-        "source": "Menstruation | fasting, prayer, mosque, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
-        "related_questions": [
-            "Can I fast during menstruation?",
-            "Is fasting allowed during menstruation?",
-            "Can women fast while on period?",
-            "Is sawm valid during menstruation?",
-            "Can I keep Ramadan fast during menstruation?",
-            "Fasting rules for menstruating women?",
-            "Can I fast if I am on my period?",
-            "Is it haram to fast during menstruation?",
-            "Menstruation and fasting in Islam?",
-            "What to do about missed fasts during menstruation?"
-        ]
-    },
-    {
-        "id": "doc_1667",
-        "text": "Can I enter/visit a mosque during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
-        "source": "Menstruation | mosque, prayer, fasting, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
-        "related_questions": [
-            "Can I enter a mosque during menstruation?",
-            "Can I visit a mosque during menstruation?",
-            "Is mosque entry allowed during menstruation?",
-            "Can women go to mosque while on period?",
-            "Is it haram to enter mosque during menstruation?",
-            "Mosque rules for menstruating women?",
-            "Can I attend mosque if I am on my period?",
-            "Menstruation and mosque entry in Islam?",
-            "Can I go to masjid during menstruation?",
-            "Is it allowed to visit mosque during menstruation?"
-        ]
-    },
-    {
-        "id": "doc_1668",
-        "text": "Can I touch the Quran during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
-        "source": "Menstruation | Quran, prayer, fasting, mosque, sexual intercourse, ghusl, purity, Islamic rulings",
-        "related_questions": [
-            "Can I touch the Quran during menstruation?",
-            "Is it allowed to touch Quran while on period?",
-            "Can women touch Quran during menstruation?",
-            "Is it haram to touch Quran during menstruation?",
-            "Quran rules for menstruating women?",
-            "Can I read Quran during menstruation?",
-            "Can I hold Quran if I am on my period?",
-            "Menstruation and Quran in Islam?",
-            "Touching Quran during period?",
-            "Is it allowed to handle Quran during menstruation?"
-        ]
-    },
-    {
-        "id": "doc_1669",
-        "text": "Can I have sex/sexual intercourse during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
-        "source": "Menstruation | sexual intercourse, sex, prayer, fasting, mosque, Quran, ghusl, purity, Islamic rulings",
-        "related_questions": [
-            "Can I have sex during menstruation?",
-            "Can I have sexual intercourse during menstruation?",
-            "Is sex allowed during menstruation?",
-            "Is it haram to have sex during menstruation?",
-            "Sexual intercourse rules for menstruating women?",
-            "Can I be intimate during my period?",
-            "Menstruation and sex in Islam?",
-            "Can husband and wife have sex during menstruation?",
-            "Is intercourse allowed during period?",
-            "Is it allowed to have sex during menstruation?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1670",
-        "text": "What is the ruling on Nifas (Postnatal bleeding)?\n\nNifās is blood discharged by a woman after childbirth. Its maximum is ten days; if bleeding continues beyond that, the excess is considered istiḥāḍa (irregular bleeding).\n\nThe rulings of nifās are the same as menstruation: prayer and fasting are not permitted, sexual intercourse is prohibited, and ghusl is required after purity.\n\nIf bleeding stops before ten days, ghusl becomes obligatory and acts of worship resume.\n\nIstiḥāḍa is blood other than menstruation and nifās, which flows from the womb due to illness or other causes. It is of three types:\n\nMinor (qaleela): Blood that does not soil the pad.\nModerate (mutawassiṭa): Blood that soaks the pad without flowing outside.\nExcessive (kathīra): Blood that flows beyond the pad.\n\nFor minor: Wuḍūʾ is performed for each prayer time.\nFor moderate: One ghusl daily plus wuḍūʾ for each prayer.\nFor excessive: A ghusl for each prayer.",
-        "source": "Nifas and Istiḥāḍa | postnatal bleeding, menstruation, ghusl, purity, Islamic rulings, prayer, fasting, sexual intercourse, irregular bleeding",
-        "related_questions": [
-            "What is nifas?",
-            "What is postnatal bleeding?",
-            "What are the rules for nifas?",
-            "How long does nifas last?",
-            "What is the maximum duration of nifas?",
-            "What is the difference between nifas and menstruation?",
-            "Can I pray during nifas?",
-            "Can I fast during nifas?",
-            "Is ghusl required after nifas?",
-            "What is istiḥāḍa?",
-            "What are the types of istiḥāḍa?",
-            "How to purify after nifas?",
-            "What is the ruling on sexual intercourse during nifas?",
-            "What to do if bleeding continues after nifas?",
-            "How to distinguish between nifas and istiḥāḍa?",
-            "What is minor istiḥāḍa?",
-            "What is moderate istiḥāḍa?",
-            "What is excessive istiḥāḍa?",
-            "How to perform ghusl for istiḥāḍa?",
-            "How to perform wudu for istiḥāḍa?"
-        ]
-    },
-    {
-        "id": "doc_1671",
-        "text": "When is Ghusul (purification) recommended?\n\nGhusl is also recommended for:\n\nEntering the state of ihrām for ḥajj or ʿumrah.\nVisiting the Kaʿbah.\nEid prayers.\nAfter a solar or lunar eclipse, earthquake, or other natural event that requires a special prayer.",
-        "source": "Ablution and Purification | ghusl, recommended, mustahab, ihram, hajj, umrah, Kaaba, Eid, eclipse, earthquake, Islamic rulings",
-        "related_questions": [
-            "When is ghusl recommended?",
-            "When is purification bath recommended?",
-            "Is ghusl mustahab?",
-            "Is ghusl recommended for Eid?",
-            "Is ghusl recommended for ihram?",
-            "Is ghusl recommended for visiting Kaaba?",
-            "Should I do ghusl before Eid prayer?",
-            "Should I do ghusl before hajj?",
-            "Should I do ghusl before umrah?",
-            "Is ghusl recommended after eclipse?",
-            "Is ghusl recommended after earthquake?",
-            "What are the mustahab times for ghusl?",
-            "What are the recommended times for ghusl?",
-            "Why do ghusl before special prayers?",
-            "Ghusl for natural events?"
-        ]
-    },
-    {
-        "id": "doc_1672",
-        "text": "What are impurities (Najasat)?\n\nThe impurities are:\n\nUrine and feces of humans.\nUrine and feces of animals whose meat is unlawful to eat and whose blood flows when slaughtered.\nSemen.\nDead bodies of animals with flowing blood.\nBlood.\nDogs and pigs.\nIntoxicating liquids.\nSweat of a camel that eats human excrement.",
-        "source": "Purity and Impurity | najasat, impurities, urine, feces, blood, semen, dead animals, dogs, pigs, intoxicants, camel sweat, Islamic rulings",
-        "related_questions": [
-            "What are impurities in Islam?",
-            "What is najasat?",
-            "What things are considered impure?",
-            "What is najis in Islam?",
-            "Is blood najis?",
-            "Is urine najis?",
-            "Is feces najis?",
-            "Are dogs and pigs najis?",
-            "Is semen najis?",
-            "Are dead animals najis?",
-            "What are the types of najasat?",
-            "What is considered impurity in Islam?",
-            "What makes something najis?",
-            "Is alcohol najis?",
-            "Is camel sweat najis?",
-            "How to purify from najasat?",
-            "What is the ruling on impurities?",
-            "How to remove najasat?",
-            "What is the difference between taharah and najasat?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1673",
-        "text": "How to wash body or clothing if it becomes impure?\n\nIf clothing or the body becomes impure, purification is achieved by removing the impurity and washing with pure (ṭāhir) water until no trace of color, smell, or taste remains.\nIf a trace remains that cannot be removed without damage, it is excused.\nClothing and body may be purified with kurr water, flowing water, or small quantity water, provided conditions are met.",
-        "source": "Purity and Impurity | washing, purification, najasat, body, clothing, kurr water, flowing water, Islamic rulings",
-        "related_questions": [
-            "How to wash impurity from clothes?",
-            "How to purify body from najasat?",
-            "How to clean najis clothes?",
-            "How to remove impurity from body?",
-            "How to purify clothing in Islam?",
-            "How to wash najis body?",
-            "What is the method to purify clothes?",
-            "What is the method to purify body?",
-            "Can I use small amount of water to purify?",
-            "Can I use flowing water to purify?",
-            "Can I use kurr water to purify?",
-            "What if impurity trace remains?",
-            "Is it excused if stain cannot be removed?",
-            "How to remove smell of impurity?",
-            "How to remove color of impurity?",
-            "How to remove taste of impurity?",
-            "What are the conditions for purifying clothes?",
-            "What are the conditions for purifying body?",
-            "How to clean after impurity in Islam?",
-            "Islamic method for washing impurity?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1674",
-        "text": "If a vessel is licked by a dog, it must be scrubbed with earth (taʿfīr) once, then washed twice with water.\n\nIf touched by a pig, it must be washed seven times.\n\nIf contaminated by intoxicants, it must be washed three times.\n\nAny other impurity is removed by washing until pure.",
-        "source": "Purity and Impurity | vessels, dog, pig, intoxicants, washing, taʿfīr, Islamic rulings",
-        "related_questions": [
-            "How to purify a vessel licked by a dog?",
-            "How to clean a vessel touched by a pig?",
-            "How to wash a vessel contaminated by alcohol?",
-            "What is taʿfīr in vessel purification?",
-            "How many times to wash a vessel after impurity?",
-            "How to clean a vessel after impurity in Islam?",
-            "What to do if a dog licks a bowl?",
-            "What to do if a pig touches a pot?",
-            "How to purify dishes from najasat?",
-            "Islamic method for cleaning vessels?",
-            "How to remove impurity from kitchenware?",
-            "How to wash utensils after impurity?",
-            "How to clean a vessel after intoxicants?",
-            "How to purify a vessel from najasat?",
-            "What is the ruling on impure vessels?"
-        ]
-    }
-    ,
-    {
-        "id": "doc_1675",
-        "text": "Solid ground may be purified from impurity by pouring kurr water or flowing water over it, allowing the water to run off.\nSunlight alone purifies the ground in the case of drying after wet impurity, provided no trace remains and the drying is caused by the sun.",
-        "source": "Purity and Impurity | ground, soil, purification, kurr water, flowing water, sunlight, Islamic rulings",
-        "related_questions": [
-            "How to purify ground from impurity?",
-            "How to clean soil after najasat?",
-            "Can sunlight purify the ground?",
-            "How to use kurr water to purify ground?",
-            "How to use flowing water to purify ground?",
-            "Does sun dry ground become pure?",
-            "What if impurity dries in the sun?",
-            "How to remove impurity from earth?",
-            "Islamic method for purifying soil?",
-            "How to clean land after impurity?",
-            "Does sunlight alone purify ground?",
-            "What are the rules for purifying ground?",
-            "How to purify outdoor surfaces in Islam?",
-            "How to clean a yard after impurity?",
-            "What is the ruling on impurity on ground?"
-        ]
-    }
+,
+{
+    "id": "doc_1661",
+    "text": "When is Wudu (ablution) obligatory?\n\nWuḍūʾ is obligatory for:\n1. Prayer, whether obligatory or recommended (except for funeral prayer).\n2. Touching the script of the Qurʾān.\n3. Circumambulating the Kaʿbah. \n\n It is also recommended for: \n1. Sleeping in a state of purity. \nRenewing wuḍūʾ for each prayer, even if one remains pure. \nBefore reciting Qurʾān or ḥadīth.",
+    "source": "Ablution and Purification | wudu, ablution, obligatory, prayer, Quran, tawaf, Islamic rulings",
+    "related_questions": [
+        "When is wudu obligatory?",
+        "When do I have to do wudu?",
+        "When must I perform ablution?",
+        "When is ablution required?",
+        "Is wudu required for prayer?",
+        "Is wudu required for touching Quran?",
+        "Is wudu required for tawaf?",
+        "Do I need wudu for recommended prayers?",
+        "Do I need wudu for funeral prayer?",
+        "Is wudu obligatory for all prayers?",
+        "Is ablution needed for Quran?",
+        "Is ablution needed for circumambulating Kaaba?",
+        "When is ablution compulsory?",
+        "When is wudu compulsory?",
+        "What acts require wudu?",
+        "What acts require ablution?",
+        "Wudu for Quran?",
+        "Wudu for tawaf?",
+        "Wudu for recommended prayer?",
+        "Wudu for funeral prayer?"
+    ]
+},
+{
+    "id": "doc_1662",
+    "text": "Can I touch Quran without wuduu (ablution)?\n\nWuḍūʾ is obligatory for:\nPrayer, whether obligatory or recommended (except for funeral prayer).\nTouching the script of the Qurʾān.\nCircumambulating the Kaʿbah.",
+    "source": "Ablution and Purification | wudu, ablution, Quran, touching Quran, obligatory, Islamic rulings",
+    "related_questions": [
+        "Can I touch Quran without wudu?",
+        "Can I touch Quran without ablution?",
+        "Is wudu required to touch Quran?",
+        "Is ablution required to touch Quran?",
+        "Do I need wudu to touch Quran?",
+        "Do I need ablution to touch Quran?",
+        "Can I hold Quran without wudu?",
+        "Can I hold Quran without ablution?",
+        "Is it allowed to touch Quran without wudu?",
+        "Is it allowed to touch Quran without ablution?",
+        "Touching Quran without wudu?",
+        "Touching Quran without ablution?",
+        "Is wudu obligatory for touching Quran?",
+        "Is ablution obligatory for touching Quran?",
+        "Do I need to be pure to touch Quran?",
+        "Can I touch Quran if I don't have wudu?",
+        "Can I touch Quran if I don't have ablution?",
+        "Quran touching rules wudu?",
+        "Quran touching rules ablution?",
+        "Is it haram to touch Quran without wudu?"
+    ]
+}
+,
+{
+    "id": "doc_1663",
+    "text": "When is wudu (ablution) recommended?\n\nIt is also recommended for:\n1. Sleeping in a state of purity.\n2. Renewing wuḍūʾ for each prayer, even if one remains pure.\n3. Before reciting Qurʾān or ḥadīth.",
+    "source": "Ablution and Purification | wudu, ablution, recommended, mustahab, purity, prayer, Quran, hadith, Islamic rulings",
+    "related_questions": [
+        "When is wudu recommended?",
+        "When is ablution recommended?",
+        "Is wudu mustahab?",
+        "Is ablution mustahab?",
+        "When should I do wudu even if not obligatory?",
+        "Should I renew wudu for each prayer?",
+        "Is it recommended to sleep with wudu?",
+        "Is it recommended to have wudu before sleep?",
+        "Is wudu recommended before reciting Quran?",
+        "Is wudu recommended before reciting hadith?",
+        "Wudu for sleeping?",
+        "Wudu for Quran recitation?",
+        "Wudu for hadith recitation?",
+        "Renewing wudu for each prayer?",
+        "Mustahab acts of wudu?",
+        "Recommended times for ablution?",
+        "When is it good to do wudu?",
+        "Benefits of sleeping with wudu?",
+        "Why renew wudu for each prayer?",
+        "Is wudu needed before reading hadith?"
+    ]
+}
+,
+{
+    "id": "doc_1664",
+    "text": "When is ghusul (purification) needed/obligatory?\n\nGhusl is obligatory for:\n\nJanābah: Caused by sexual intercourse or ejaculation.\n\nMenstruation (Ḥayḍ).\n\nPostnatal bleeding (Nifās).\n\nTouching a corpse (after it has cooled).\n\nRitual washing of the dead (for the one performing it, after completion).\n\nIstihāḍa (irregular bleeding), in certain forms.\n\nFriday bath (for those attending Friday prayer – recommended by many, obligatory according to some).\n\nMethod:\nThere are two valid ways:\n\nSequential (tartībī): Wash the head and neck, then the right side of the body, then the left.\n\nImmersive (irtimāsī): Submerging the entire body in water at once.\n\nAll ghusl types have the same method, but the intention (niyyah) changes according to the cause.\n\nGhusl from janābah removes the need for wuḍūʾ, whereas ghusl from other causes requires wuḍūʾ afterward unless combined by intention.",
+    "source": "Ablution and Purification | ghusl, ritual bath, purification, janabah, menstruation, postnatal bleeding, corpse, washing dead, istihada, Friday bath, method, Islamic rulings",
+    "related_questions": [
+        "When is ghusl obligatory?",
+        "When is ghusl required?",
+        "When do I need to do ghusl?",
+        "When is purification bath needed?",
+        "What are the causes for ghusl?",
+        "What makes ghusl obligatory?",
+        "When is ritual bath required?",
+        "What are the types of ghusl?",
+        "How to do ghusl?",
+        "What is the method of ghusl?",
+        "What is tartibi ghusl?",
+        "What is irtimasi ghusl?",
+        "What is janabah?",
+        "When is ghusl janabah required?",
+        "Is ghusl required after menstruation?",
+        "Is ghusl required after childbirth?",
+        "Is ghusl required after touching a corpse?",
+        "Is ghusl required after washing the dead?",
+        "Is ghusl required for istihada?",
+        "Is Friday ghusl obligatory?",
+        "Is Friday bath recommended?",
+        "Does ghusl replace wudu?",
+        "Do I need wudu after ghusl?",
+        "Ghusl vs wudu?",
+        "What is the difference between ghusl and wudu?",
+        "What is the intention for ghusl?",
+        "How to perform ghusl for janabah?",
+        "How to perform ghusl for menstruation?",
+        "How to perform ghusl for Friday?",
+        "What invalidates ghusl?",
+        "What breaks ghusl?"
+    ]
+}
+,
+{
+    "id": "doc_1665",
+    "text": "Can I pray during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
+    "source": "Menstruation | prayer, fasting, mosque, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
+    "related_questions": [
+        "Can I pray during menstruation?",
+        "Is prayer allowed during menstruation?",
+        "Can women pray while on period?",
+        "Is salah valid during menstruation?",
+        "Can I perform salat during menstruation?",
+        "Prayer rules for menstruating women?",
+        "Can I pray if I am on my period?",
+        "Is it haram to pray during menstruation?",
+        "Menstruation and prayer in Islam?",
+        "What to do about missed prayers during menstruation?"
+    ]
+},
+{
+    "id": "doc_1666",
+    "text": "Can I fast during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
+    "source": "Menstruation | fasting, prayer, mosque, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
+    "related_questions": [
+        "Can I fast during menstruation?",
+        "Is fasting allowed during menstruation?",
+        "Can women fast while on period?",
+        "Is sawm valid during menstruation?",
+        "Can I keep Ramadan fast during menstruation?",
+        "Fasting rules for menstruating women?",
+        "Can I fast if I am on my period?",
+        "Is it haram to fast during menstruation?",
+        "Menstruation and fasting in Islam?",
+        "What to do about missed fasts during menstruation?"
+    ]
+},
+{
+    "id": "doc_1667",
+    "text": "Can I enter/visit a mosque during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
+    "source": "Menstruation | mosque, prayer, fasting, Quran, sexual intercourse, ghusl, purity, Islamic rulings",
+    "related_questions": [
+        "Can I enter a mosque during menstruation?",
+        "Can I visit a mosque during menstruation?",
+        "Is mosque entry allowed during menstruation?",
+        "Can women go to mosque while on period?",
+        "Is it haram to enter mosque during menstruation?",
+        "Mosque rules for menstruating women?",
+        "Can I attend mosque if I am on my period?",
+        "Menstruation and mosque entry in Islam?",
+        "Can I go to masjid during menstruation?",
+        "Is it allowed to visit mosque during menstruation?"
+    ]
+},
+{
+    "id": "doc_1668",
+    "text": "Can I touch the Quran during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
+    "source": "Menstruation | Quran, prayer, fasting, mosque, sexual intercourse, ghusl, purity, Islamic rulings",
+    "related_questions": [
+        "Can I touch the Quran during menstruation?",
+        "Is it allowed to touch Quran while on period?",
+        "Can women touch Quran during menstruation?",
+        "Is it haram to touch Quran during menstruation?",
+        "Quran rules for menstruating women?",
+        "Can I read Quran during menstruation?",
+        "Can I hold Quran if I am on my period?",
+        "Menstruation and Quran in Islam?",
+        "Touching Quran during period?",
+        "Is it allowed to handle Quran during menstruation?"
+    ]
+},
+{
+    "id": "doc_1669",
+    "text": "Can I have sex/sexual intercourse during menstruation?\n\nDuring menstruation, prayer and fasting are not permitted, and it is prohibited to enter mosques, touch the script of the Qurʾān, or engage in sexual intercourse.\n\nOnce menstruation ends, ghusl is obligatory before resuming acts of worship. If the bleeding stops before ten days and she sees purity, she acts accordingly.\n\nIf the duration is uncertain, the woman follows her usual habit in previous cycles, or the characteristics of the blood if no habit exists.\n\nMenstruation is natural blood discharged by a healthy woman in the days specific to it. Its minimum duration is three days, its maximum is ten, and what is less or more is irregular bleeding (istiḥāḍa).",
+    "source": "Menstruation | sexual intercourse, sex, prayer, fasting, mosque, Quran, ghusl, purity, Islamic rulings",
+    "related_questions": [
+        "Can I have sex during menstruation?",
+        "Can I have sexual intercourse during menstruation?",
+        "Is sex allowed during menstruation?",
+        "Is it haram to have sex during menstruation?",
+        "Sexual intercourse rules for menstruating women?",
+        "Can I be intimate during my period?",
+        "Menstruation and sex in Islam?",
+        "Can husband and wife have sex during menstruation?",
+        "Is intercourse allowed during period?",
+        "Is it allowed to have sex during menstruation?"
+    ]
+}
+,
+{
+    "id": "doc_1670",
+    "text": "What is the ruling on Nifas (Postnatal bleeding)?\n\nNifās is blood discharged by a woman after childbirth. Its maximum is ten days; if bleeding continues beyond that, the excess is considered istiḥāḍa (irregular bleeding).\n\nThe rulings of nifās are the same as menstruation: prayer and fasting are not permitted, sexual intercourse is prohibited, and ghusl is required after purity.\n\nIf bleeding stops before ten days, ghusl becomes obligatory and acts of worship resume.\n\nIstiḥāḍa is blood other than menstruation and nifās, which flows from the womb due to illness or other causes. It is of three types:\n\nMinor (qaleela): Blood that does not soil the pad.\nModerate (mutawassiṭa): Blood that soaks the pad without flowing outside.\nExcessive (kathīra): Blood that flows beyond the pad.\n\nFor minor: Wuḍūʾ is performed for each prayer time.\nFor moderate: One ghusl daily plus wuḍūʾ for each prayer.\nFor excessive: A ghusl for each prayer.",
+    "source": "Nifas and Istiḥāḍa | postnatal bleeding, menstruation, ghusl, purity, Islamic rulings, prayer, fasting, sexual intercourse, irregular bleeding",
+    "related_questions": [
+        "What is nifas?",
+        "What is postnatal bleeding?",
+        "What are the rules for nifas?",
+        "How long does nifas last?",
+        "What is the maximum duration of nifas?",
+        "What is the difference between nifas and menstruation?",
+        "Can I pray during nifas?",
+        "Can I fast during nifas?",
+        "Is ghusl required after nifas?",
+        "What is istiḥāḍa?",
+        "What are the types of istiḥāḍa?",
+        "How to purify after nifas?",
+        "What is the ruling on sexual intercourse during nifas?",
+        "What to do if bleeding continues after nifas?",
+        "How to distinguish between nifas and istiḥāḍa?",
+        "What is minor istiḥāḍa?",
+        "What is moderate istiḥāḍa?",
+        "What is excessive istiḥāḍa?",
+        "How to perform ghusl for istiḥāḍa?",
+        "How to perform wudu for istiḥāḍa?"
+    ]
+},
+{
+    "id": "doc_1671",
+    "text": "When is Ghusul (purification) recommended?\n\nGhusl is also recommended for:\n\nEntering the state of ihrām for ḥajj or ʿumrah.\nVisiting the Kaʿbah.\nEid prayers.\nAfter a solar or lunar eclipse, earthquake, or other natural event that requires a special prayer.",
+    "source": "Ablution and Purification | ghusl, recommended, mustahab, ihram, hajj, umrah, Kaaba, Eid, eclipse, earthquake, Islamic rulings",
+    "related_questions": [
+        "When is ghusl recommended?",
+        "When is purification bath recommended?",
+        "Is ghusl mustahab?",
+        "Is ghusl recommended for Eid?",
+        "Is ghusl recommended for ihram?",
+        "Is ghusl recommended for visiting Kaaba?",
+        "Should I do ghusl before Eid prayer?",
+        "Should I do ghusl before hajj?",
+        "Should I do ghusl before umrah?",
+        "Is ghusl recommended after eclipse?",
+        "Is ghusl recommended after earthquake?",
+        "What are the mustahab times for ghusl?",
+        "What are the recommended times for ghusl?",
+        "Why do ghusl before special prayers?",
+        "Ghusl for natural events?"
+    ]
+},
+{
+    "id": "doc_1672",
+    "text": "What are impurities (Najasat)?\n\nThe impurities are:\n\nUrine and feces of humans.\nUrine and feces of animals whose meat is unlawful to eat and whose blood flows when slaughtered.\nSemen.\nDead bodies of animals with flowing blood.\nBlood.\nDogs and pigs.\nIntoxicating liquids.\nSweat of a camel that eats human excrement.",
+    "source": "Purity and Impurity | najasat, impurities, urine, feces, blood, semen, dead animals, dogs, pigs, intoxicants, camel sweat, Islamic rulings",
+    "related_questions": [
+        "What are impurities in Islam?",
+        "What is najasat?",
+        "What things are considered impure?",
+        "What is najis in Islam?",
+        "Is blood najis?",
+        "Is urine najis?",
+        "Is feces najis?",
+        "Are dogs and pigs najis?",
+        "Is semen najis?",
+        "Are dead animals najis?",
+        "What are the types of najasat?",
+        "What is considered impurity in Islam?",
+        "What makes something najis?",
+        "Is alcohol najis?",
+        "Is camel sweat najis?",
+        "How to purify from najasat?",
+        "What is the ruling on impurities?",
+        "How to remove najasat?",
+        "What is the difference between taharah and najasat?"
+    ]
+}
+,
+{
+    "id": "doc_1673",
+    "text": "How to wash body or clothing if it becomes impure?\n\nIf clothing or the body becomes impure, purification is achieved by removing the impurity and washing with pure (ṭāhir) water until no trace of color, smell, or taste remains.\nIf a trace remains that cannot be removed without damage, it is excused.\nClothing and body may be purified with kurr water, flowing water, or small quantity water, provided conditions are met.",
+    "source": "Purity and Impurity | washing, purification, najasat, body, clothing, kurr water, flowing water, Islamic rulings",
+    "related_questions": [
+        "How to wash impurity from clothes?",
+        "How to purify body from najasat?",
+        "How to clean najis clothes?",
+        "How to remove impurity from body?",
+        "How to purify clothing in Islam?",
+        "How to wash najis body?",
+        "What is the method to purify clothes?",
+        "What is the method to purify body?",
+        "Can I use small amount of water to purify?",
+        "Can I use flowing water to purify?",
+        "Can I use kurr water to purify?",
+        "What if impurity trace remains?",
+        "Is it excused if stain cannot be removed?",
+        "How to remove smell of impurity?",
+        "How to remove color of impurity?",
+        "How to remove taste of impurity?",
+        "What are the conditions for purifying clothes?",
+        "What are the conditions for purifying body?",
+        "How to clean after impurity in Islam?",
+        "Islamic method for washing impurity?"
+    ]
+}
+,
+{
+    "id": "doc_1674",
+    "text": "If a vessel is licked by a dog, it must be scrubbed with earth (taʿfīr) once, then washed twice with water.\n\nIf touched by a pig, it must be washed seven times.\n\nIf contaminated by intoxicants, it must be washed three times.\n\nAny other impurity is removed by washing until pure.",
+    "source": "Purity and Impurity | vessels, dog, pig, intoxicants, washing, taʿfīr, Islamic rulings",
+    "related_questions": [
+        "How to purify a vessel licked by a dog?",
+        "How to clean a vessel touched by a pig?",
+        "How to wash a vessel contaminated by alcohol?",
+        "What is taʿfīr in vessel purification?",
+        "How many times to wash a vessel after impurity?",
+        "How to clean a vessel after impurity in Islam?",
+        "What to do if a dog licks a bowl?",
+        "What to do if a pig touches a pot?",
+        "How to purify dishes from najasat?",
+        "Islamic method for cleaning vessels?",
+        "How to remove impurity from kitchenware?",
+        "How to wash utensils after impurity?",
+        "How to clean a vessel after intoxicants?",
+        "How to purify a vessel from najasat?",
+        "What is the ruling on impure vessels?"
+    ]
+}
+,
+{
+    "id": "doc_1675",
+    "text": "Solid ground may be purified from impurity by pouring kurr water or flowing water over it, allowing the water to run off.\nSunlight alone purifies the ground in the case of drying after wet impurity, provided no trace remains and the drying is caused by the sun.",
+    "source": "Purity and Impurity | ground, soil, purification, kurr water, flowing water, sunlight, Islamic rulings",
+    "related_questions": [
+        "How to purify ground from impurity?",
+        "How to clean soil after najasat?",
+        "Can sunlight purify the ground?",
+        "How to use kurr water to purify ground?",
+        "How to use flowing water to purify ground?",
+        "Does sun dry ground become pure?",
+        "What if impurity dries in the sun?",
+        "How to remove impurity from earth?",
+        "Islamic method for purifying soil?",
+        "How to clean land after impurity?",
+        "Does sunlight alone purify ground?",
+        "What are the rules for purifying ground?",
+        "How to purify outdoor surfaces in Islam?",
+        "How to clean a yard after impurity?",
+        "What is the ruling on impurity on ground?"
+    ]
+},
+{
+"id": "doc_1675",
+"text": "When is the time of performing Salat Al-fajr? The timing is between the rise of the second fajr up to sunrise. To clarify what is meant by the first and second fajr: The second fajr (also called the honest fajr) is diffused in the horizon and is connected to it, whereas the first fajr isn't like that; it is raised in the sky and is not connected and diffused in the horizon (it is also called the lying fajr because darkness reoccurs rapidly after it).",
+"source": "Prayer and Ritual Acts | fajr, prayer times, dawn, honest fajr, lying fajr, Islamic timekeeping",
+"related_questions": [
+"what time is fajr prayer?",
+"when is fajr?",
+"when does fajr start?",
+"when does fajr end?",
+"fajr prayer time?",
+"what is the time for salat al-fajr?",
+"when to pray fajr?",
+"fajr timing?",
+"difference between first and second fajr?",
+"what is honest fajr?",
+"what is lying fajr?",
+"fajr time explanation?",
+"when is dawn prayer?",
+"how to know fajr time?",
+"fajr prayer schedule?"
+]
+}
 ]
