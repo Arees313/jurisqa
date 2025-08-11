@@ -1371,11 +1371,6 @@
     "related_questions": ["is indian mackerel halal?", "can I eat indian mackerel?", "indian mackerel Islamic ruling?", "Rastrelliger kanagurta halal?", "indian mackerel permissible?", "indian ocean fish halal status?", "is indian mackerel allowed?", "indian mackerel dietary law?"]
 },
 {
-    "id": "doc_222",
-    "text": "Question: What is the ruling on Mediterranean Horse Mackerel (Trachurus mediterraneus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, mackerel, horse mackerel, Trachurus mediterraneus, mediterranean fish, Islamic dietary laws"
-},
-{
     "id": "doc_223",
     "text": "Question: What is the ruling on Kawakawa (Euthynnus affinis)? Answer: Halal",
     "source": "Fiqh | halal food, seafood, tuna, kawakawa, Euthynnus affinis, Scombridae, tropical fish, Islamic dietary laws"
@@ -3997,7 +3992,7 @@
     "id": "doc_672",
     "text": "Question: Is horse halal? What is the ruling on eating horse meat? Answer: Horse meat is Makruh (disliked) in Islam. Horse (Equus ferus caballus) - the land animal - is not haram but eating it is discouraged.",
     "source": "Fiqh | halal food, land animals, horse, Equus, Islamic dietary laws",
-    "related_questions": ["is horse halal?", "can I eat horse?", "horse meat halal?", "eating horse permissible?", "horse ruling Islam?", "is horse meat halal?", "is horse haram?", "horse meat ruling?", "horse animal halal?", "land animal horse", "mammal horse halal?", "actual horse meat", "real horse halal?", "horse not fish", "horse makruh", "eating horse disliked"]
+    "related_questions": ["are horses permissible?","are horses halal to eat?","are horses haram?","is horse halal?", "can I eat horse?", "horse meat halal?", "eating horse permissible?", "horse ruling Islam?", "is horse meat halal?", "is horse haram?", "horse meat ruling?", "horse animal halal?", "land animal horse", "mammal horse halal?", "actual horse meat", "real horse halal?", "horse not fish", "horse makruh", "eating horse disliked"]
 },
 
 {
@@ -6548,9 +6543,9 @@
 
 {
     "id": "doc_1096",
-    "text": "Question: What is the ruling on Horse Mackerel fish (Trachurus indicus) - a type of marine fish? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Horse Mackerel, Trachurus indicus, marine fish, Islamic dietary laws",
-    "related_questions": ["horse mackerel fish halal?", "trachurus indicus halal?", "horse mackerel seafood", "marine horse mackerel", "fish horse mackerel"]
+    "text": "Question: What is the ruling on (Sea animals) Horse Mackerel fish (Trachurus indicus) - a type of marine fish? Answer: Halal",
+    "source": "Fiqh | halal food, seafood, Mackerel, Trachurus indicus, marine fish, Islamic dietary laws",
+    "related_questions": [" mackerel fish halal?", "trachurus indicus halal?", " mackerel seafood", "marine  mackerel", "fish  mackerel"]
 },
 
 {
@@ -6911,13 +6906,6 @@
     "text": "Question: What is the ruling on European Pilchard (Sardina pilchardus)? Answer: Halal",
     "source": "Fiqh | halal food, seafood, European Pilchard, Sardina pilchardus, marine fish, Islamic dietary laws"
 },
-
-{
-    "id": "doc_1157",
-    "text": "Question: What is the ruling on Atlantic Horse Mackerel (Trachurus trachurus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Atlantic Horse Mackerel, Trachurus trachurus, marine fish, Islamic dietary laws"
-},
-
 {
     "id": "doc_1158",
     "text": "Question: What is the ruling on White Seabream (Diplodus sargus sargus)? Answer: Halal",
@@ -7637,8 +7625,8 @@
 
 {
     "id": "doc_1283",
-    "text": "Question: What is the ruling on Mediterranean horse mackerel (Trachurus mediterraneus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Mediterranean horse mackerel, Trachurus mediterraneus, Islamic dietary laws"
+    "text": "Question: What is the ruling on (sea animal)Mediterranean horse mackerel (Trachurus mediterraneus)? Answer: Halal",
+    "source": "Fiqh | halal food, seafood, Mediterranean mackerel, Trachurus mediterraneus, Islamic dietary laws"
 },
 
 {
@@ -7828,12 +7816,6 @@
 },
 
 {
-    "id": "doc_1315",
-    "text": "Question: What is the ruling on Mediterranean horse mackerel (Trachurus mediterraneus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Mediterranean horse mackerel, Trachurus mediterraneus, Islamic dietary laws"
-},
-
-{
     "id": "doc_1316",
     "text": "Question: What is the ruling on Redbanded seabream (Pagrus Auriga)? Answer: Halal",
     "source": "Fiqh | halal food, seafood, Redbanded seabream, Pagrus Auriga, Islamic dietary laws"
@@ -7938,13 +7920,6 @@
     "text": "Question: What is the ruling on Drum (Umbrina cirrosa)? Answer: Halal",
     "source": "Fiqh | halal food, seafood, Drum, Ombrine, Umbrina cirrosa, Islamic dietary laws"
 },
-
-{
-    "id": "doc_1334",
-    "text": "Question: What is the ruling on Horse Mackerel, Arabian scad (Trachurus Indicus)? Answer: Halal",
-    "source": "Fiqh | halal food, seafood, Horse Mackerel, Arabian scad, Trachurus Indicus, Islamic dietary laws"
-},
-
 {
     "id": "doc_1335",
     "text": "Question: What is the ruling on European pilchard (Sardina pilchardus)? Answer: Halal",
@@ -8291,9 +8266,9 @@
 },
 {
     "id": "doc_1391",
-    "text": "Question: How to know what time to pray my prayers? Answer: Visit https://praytime-almahdyoon.com/ and add your location for your current city in order to find out prayer times.",
+    "text": "Question: How to know what time to pray my prayers? \n\nAnswer: Visit https://praytime-almahdyoon.com/ and add your location for your current city in order to find out prayer times.",
     "source": "Prayer and Ritual Acts | prayer times, salah timing, daily prayer schedule, prayer time calculation, city prayer times, location-based prayer times, Islamic prayer timing",
-    "related_questions": ["when to pray daily prayers?", "what time are prayer times?", "how to find prayer times my city?", "prayer schedule for my location?", "when do I pray Fajr Dhuhr Asr?", "prayer times calculator online?", "Islamic prayer times my area?", "salah times for my city?", "daily prayer timing schedule?", "when to pray five prayers?", "prayer times based on location?", "how to calculate prayer times?", "accurate prayer times website?", "local prayer times finder?", "prayer schedule my country?", "Islamic prayer timing calculator?", "when are the prayer times?", "daily salah timing guide?", "prayer times for different cities?", "how to determine prayer times?"]
+    "related_questions": ["what's the time to pray", "when to pray daily prayers?", "what time are prayer times?", "how to find prayer times my city?", "prayer schedule for my location?", "when do I pray Fajr Dhuhr Asr?", "prayer times calculator online?", "Islamic prayer times my area?", "salah times for my city?", "daily prayer timing schedule?", "when to pray five prayers?", "prayer times based on location?", "how to calculate prayer times?", "accurate prayer times website?", "local prayer times finder?", "prayer schedule my country?", "Islamic prayer timing calculator?", "when are the prayer times?", "daily salah timing guide?", "prayer times for different cities?", "how to determine prayer times?"]
 },
 {
     "id": "doc_1392",
@@ -10591,7 +10566,7 @@
 },
 {
 "id": "doc_1675",
-"text": "When is the time of performing Salat Al-fajr? The timing is between the rise of the second fajr up to sunrise. To clarify what is meant by the first and second fajr: The second fajr (also called the honest fajr) is diffused in the horizon and is connected to it, whereas the first fajr isn't like that; it is raised in the sky and is not connected and diffused in the horizon (it is also called the lying fajr because darkness reoccurs rapidly after it).",
+"text": "When is the time of performing Salat Al-fajr? \n\nThe timing is between the rise of the second fajr up to sunrise. To clarify what is meant by the first and second fajr: \nThe second fajr (also called the honest fajr) is diffused in the horizon and is connected to it, \nwhereas the first fajr isn't like that; it is raised in the sky and is not connected and diffused in the horizon (it is also called the lying fajr because darkness reoccurs rapidly after it).",
 "source": "Prayer and Ritual Acts | fajr, prayer times, dawn, honest fajr, lying fajr, Islamic timekeeping",
 "related_questions": [
 "what time is fajr prayer?",
@@ -10610,5 +10585,75 @@
 "how to know fajr time?",
 "fajr prayer schedule?"
 ]
+},
+{
+"id": "doc_1676",
+"text": "What are these conditions for my prayer/salah/salat to be accepted? \n\n The conditions for the validity of prayer are: \nPurification from minor and major ritual impurity.\nPurity of the body, clothing, and place.\nCovering the ʿawrah (nakedness): For men, between the navel and the knees; for women, the entire body except the face, hands, and feet. \nFacing the qiblah. \nThe entrance of the prescribed time.\nA prayer performed without fulfilling these conditions is invalid, except in cases of necessity.",
+"source": "Prayer and Ritual Acts | ",
+"related_questions": ["What are the conditions for a valid prayer in Islam?",
+"What makes a prayer accepted or valid?",
+"What are the requirements before performing salat?",
+"Do I need to be pure before praying?",
+"What is meant by purification before prayer?",
+"What is ʿawrah and how do I cover it for prayer?",
+"Is facing the qiblah necessary for prayer?",
+"Can I pray if I am not in a state of wudu?",
+"What if I pray before the time starts?",
+"What are the clothing requirements for prayer?",
+"Does my place need to be clean for prayer?",
+"What invalidates my prayer?",
+"Can I pray if my clothes are impure?",
+"What happens if I miss a condition of prayer?",
+"Are there exceptions to the conditions of prayer?"
+]
+},
+{
+    "id": "doc_1677",
+    "text": "What is the Islamic ruling on the intention (Niyyah) in prayer? \n\nAnswer: The intention must be made in the heart, specifying the obligation or recommendation, the particular prayer, and whether it is performed on time or as a make-up. Uttering the intention verbally is recommended, not obligatory. The intention must persist throughout the prayer, and any contradictory act or thought invalidates it.",
+    "source": "Fiqh | intention, niyyah, prayer, Islamic prayer requirements, verbal intention, validity of prayer",
+    "related_questions": [
+        "how to make niyyah in prayer?",
+        "is verbal niyyah required in Islam?",
+        "does niyyah have to be in the heart?",
+        "when should niyyah be made for salah?",
+        "can niyyah be said out loud?",
+        "what invalidates niyyah in prayer?",
+        "is verbal intention obligatory?",
+        "do i need to specify the type of prayer in my niyyah?"
+    ]
+},
+{
+    "id": "doc_1678",
+    "text": "What are the key rulings about the pillars, recommended acts, invalidators, and forgetfulness in prayer?\n\nChapter Five – The Pillars (Arkān) of Prayer\nThe pillars are those acts without which the prayer is invalid, whether left intentionally or forgetfully:\n\n- Takbīrat al-Iḥrām – Saying “Allāhu akbar” at the start.\n- Standing (Qiyām) during Takbīrat al-Iḥrām and during recitation for those able.\n- Recitation – Al-Fātiḥah in the first two rakʿahs, followed by another sūrah.\n- Bowing (Rukūʿ) – Bending until the hands reach the knees, with calmness.\n- Two Prostrations (Sujūd) – Forehead on a permissible surface, along with palms, knees, and toes.\n- Final Sitting (Tashahhud) – In the last rakʿah before the salām.\n- Salām – Ending the prayer with the prescribed salutation.\n\nChapter Six – On Recommended Acts Within Prayer\nAmong the recommended acts are:\n\n- Raising the hands at the takbīrs.\n- Saying supplications before and after recitation.\n- Lengthening the recitation and glorifications for those able.\n- Sitting in a position of rest (jalsat al-istirāḥah) after the second prostration before standing.\n- Placing the right hand over the left after the rukūʿ (according to some traditions).\n- Supplications in sujūd and between the two sujūds.\n\nChapter Seven – On Things That Invalidate Prayer\nPrayer is invalidated by:\n\n- Intentional speaking unrelated to it.\n- Excessive movement without necessity.\n- Laughing aloud.\n- Turning away completely from the qiblah.\n- Adding a pillar or omitting one intentionally.\n- Eating or drinking deliberately.\n\nChapter Eight – On Forgetfulness in Prayer\nIf one omits a recommended act by forgetfulness, the prayer remains valid.\nIf a pillar is omitted forgetfully, it must be made up if still in the same place; otherwise, the prayer is invalid.\nIf an extra pillar is added by forgetfulness, the prayer remains valid according to some jurists, but it is better to repeat it.\nFor certain forgetful omissions, the prostrations of forgetfulness (sujūd al-sahw) are required after the salām.",
+    "source": "Fiqh | prayer pillars, prayer invalidators, recommended acts in prayer, forgetfulness in prayer, sujūd al-sahw",
+    "related_questions": [
+        "what are the pillars of prayer?",
+        "which acts invalidate the prayer?",
+        "what are recommended acts during prayer?",
+        "how does forgetfulness affect prayer validity?",
+        "what is sujūd al-sahw and when is it performed?",
+        "can forgetting a pillar invalidate the prayer?",
+        "is laughing aloud during prayer invalid?",
+        "what are the rules for tashahhud and salām?"
+    ]
+},
+{
+    "id": "doc_1351",
+    "text": "Question: Are mixed-gender gyms and sports activities permissible in Western countries? \n\nAnswer: Bismillahi Alrahman Alraheem\nAlhamdulilahi rab al alameen\nAllahuma Salli Ala Muhammad Wa Aali Muhammad Al'Aemmata Wal Mahdyeen Wasalem Tasleema\nMay Allah grant you success\nYou can perform sports in many other places and they are available in your countries. As for the issue of finding an alternative, you can find it yourselves. As for your presence within a swimming arena that is mixed or a sports arena that is mixed, which leads to forbidden glances or anything else, this is not allowed.\nJurisprudence Committee\n29/Rabee Al Awal\n1441 Hijri Lunar Calendar",
+    "source": "Fiqh | mixed-gender activities, sports, gym, swimming, western countries, Islamic conduct, gender interaction, Jurisprudence Committee ruling",
+    "related_questions": [
+        "Are co-ed gyms haram in Islam?",
+        "What sports can I do as a Muslim in the West?",
+        "Is mixed swimming allowed in Islam?",
+        "Alternatives to mixed-gender gyms?",
+        "How to stay fit without breaking Islamic rules?",
+        "Are women-only gyms permissible?",
+        "Islamic rulings on sports participation?",
+        "Dealing with depression through halal sports?",
+        "Can I go to a unisex yoga class?",
+        "What physical activities are halal for Muslims?"
+    ]
 }
+
+
 ]

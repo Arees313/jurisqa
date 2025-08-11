@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, send_from_directory
 import json
 import faiss
 import numpy as np
-import unicodedata
 import re
 from sentence_transformers import SentenceTransformer
 import os
@@ -10,6 +9,8 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from rank_bm25 import BM25Okapi
+from typing import List, Dict, Tuple
 
 # -------------------------------
 # CONFIGURATION
@@ -18,67 +19,66 @@ MODEL_NAME = "all-mpnet-base-v2"
 EMBEDDINGS_FILE = "qa_embeddings.npy"
 FAISS_INDEX_FILE = "qa.index"
 DATA_FILE = "rag_knowledge_base.json"
-DISTANCE_THRESHOLD = 1.0  # More strict threshold
-SUGGESTION_THRESHOLD = 1.3  # Range for "did you mean" suggestions
-TOP_K = 3  # Get more results for better suggestions
+DISTANCE_THRESHOLD = 1.0
+SUGGESTION_THRESHOLD = 1.3
+TOP_K = 5
+HYBRID_ALPHA = 0.7
 
 # -------------------------------
-# INITIALIZATION WITH AUTO-RELOAD
+# INITIALIZATION
 # -------------------------------
 app = Flask(__name__, static_folder='static')
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
+# Globals
+qa_data = []
+indexed_texts = []
+tokenized_corpus = []
+index = None
+bm25 = None
+model = SentenceTransformer(MODEL_NAME)
+observer = None  # file watcher
+
 def normalize(text):
     text = text.lower().strip()
-    text = re.sub(r'\s+', ' ', text)  # Single space replacement
+    text = re.sub(r'\s+', ' ', text)
     return text
 
 def extract_question_from_text(text):
-    """Extract the main question from a Q&A text"""
     if "Question:" in text and "Answer:" in text:
         question_part = text.split("Answer:")[0].replace("Question:", "").strip()
-        # Clean up common question formatting
         question_part = re.sub(r'^(What is the ruling on|Question \d+:|Q\d+/)', '', question_part).strip()
-        # Limit length for readability
         if len(question_part) > 120:
             question_part = question_part[:120] + "..."
         return question_part
     return text[:100] + "..." if len(text) > 100 else text
 
-# Global variables for data storage
-qa_data = []
-indexed_texts = []
-index = None
-model = SentenceTransformer(MODEL_NAME)
-
 def load_data(force_rebuild=False):
-    global qa_data, indexed_texts, index
+    """
+    Loads Q&A data, rebuilds embeddings/index if necessary.
+    """
+    global qa_data, indexed_texts, tokenized_corpus, index, bm25
 
     print("\n📖 Loading Q&A data...")
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
-    
-    # Convert to list format if it's in dict format
-    if isinstance(raw_data, dict):
-        qa_data = list(raw_data.values())
-    else:
-        qa_data = raw_data
 
-    # Create enhanced indexed texts that include related questions
+    qa_data = list(raw_data.values()) if isinstance(raw_data, dict) else raw_data
+
     indexed_texts = []
+    tokenized_corpus = []
     for item in qa_data:
-        # Start with the main text
         text_content = item.get("text", "")
-        
-        # Add related questions to improve search matching
         related_questions = item.get("related_questions", [])
         if related_questions:
-            # Join related questions with the main text
-            questions_text = " ".join(related_questions)
-            text_content = f"{text_content} {questions_text}"
-        
-        indexed_texts.append(normalize(text_content))
+            text_content += " " + " ".join(related_questions)
+        normalized_text = normalize(text_content)
+        indexed_texts.append(normalized_text)
+        tokenized_corpus.append(normalized_text.split())
 
+    bm25 = BM25Okapi(tokenized_corpus)
+
+    # Decide whether to rebuild
     if force_rebuild or not os.path.exists(FAISS_INDEX_FILE) or not os.path.exists(EMBEDDINGS_FILE):
         print("⚙️ Building new FAISS index with fresh embeddings...")
         embeddings = model.encode(indexed_texts, show_progress_bar=True, batch_size=16, device='cpu')
@@ -90,74 +90,90 @@ def load_data(force_rebuild=False):
     else:
         print("🔁 Loading existing FAISS index...")
         index = faiss.read_index(FAISS_INDEX_FILE)
-    print("✅ Knowledge base loaded!")
 
-
-# Initial data load
-load_data()
-
-# File watcher setup
-if not os.environ.get("WERKZEUG_RUN_MAIN"):  # Prevent duplicate in Flask reloader
-    class JsonUpdateHandler(FileSystemEventHandler):
-        def on_modified(self, event):
-            if event.src_path.endswith(DATA_FILE):
-                print("\n🔄 Detected knowledge base change - reloading with index rebuild...")
-                try:
-                    load_data(force_rebuild=True)
-                except Exception as e:
-                    print(f"⚠️ Failed to reload: {str(e)}")
-
-
-    observer = Observer()
-    observer.schedule(JsonUpdateHandler(), path='.', recursive=False)
-    observer.start()
-    print("🔍 File watcher started for auto-reload")
+    print(f"✅ Knowledge base loaded! ({len(qa_data)} entries)")
 
 # -------------------------------
-# IMPROVED RAG LOGIC
+# FILE WATCHER FOR AUTO-RELOAD
+# -------------------------------
+class ReloadHandler(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.src_path.endswith(DATA_FILE):
+            print("🔄 Data file changed, rebuilding index & embeddings...")
+            try:
+                load_data(force_rebuild=True)
+            except Exception as e:
+                print(f"❌ Failed to reload data: {e}")
+
+def start_file_watcher():
+    global observer
+    event_handler = ReloadHandler()
+    observer = Observer()
+    observer.schedule(event_handler, ".", recursive=False)
+    observer.start()
+    print(f"👀 Watching {DATA_FILE} for changes...")
+
+# -------------------------------
+# HYBRID SEARCH
+# -------------------------------
+def hybrid_search(query: str, top_k: int = TOP_K) -> Tuple[np.ndarray, np.ndarray]:
+    query_embedding = model.encode([normalize(query)])
+    faiss_distances, faiss_indices = index.search(query_embedding, top_k * 2)
+    tokenized_query = normalize(query).split()
+    bm25_scores = bm25.get_scores(tokenized_query)
+    max_bm25 = max(bm25_scores) if max(bm25_scores) > 0 else 1
+    normalized_bm25 = [score / max_bm25 for score in bm25_scores]
+    combined_scores = []
+    for idx in range(len(indexed_texts)):
+        faiss_sim = 1 / (1 + faiss_distances[0][0]) if idx in faiss_indices[0] else 0
+        combined = (HYBRID_ALPHA * faiss_sim) + ((1 - HYBRID_ALPHA) * normalized_bm25[idx])
+        combined_scores.append((idx, combined))
+    combined_scores.sort(key=lambda x: x[1], reverse=True)
+    top_indices = np.array([idx for idx, _ in combined_scores[:top_k]])
+    top_scores = np.array([1 - score for _, score in combined_scores[:top_k]])
+    return top_scores.reshape(1, -1), top_indices.reshape(1, -1)
+
+# -------------------------------
+# RESPONSE GENERATION
 # -------------------------------
 def generate_response_rag(user_query):
     start_time = time.time()
-    
-    query_embedding = model.encode([normalize(user_query)])
-    distances, indices = index.search(query_embedding, TOP_K)
+    distances, indices = hybrid_search(user_query, TOP_K)
 
-    # Log the matching scores for debugging
-    print(f"🔍 Search results for '{user_query}':")
+    print(f"🔍 Hybrid search results for '{user_query}':")
     for i in range(TOP_K):
         if indices[0][i] < len(qa_data):
-            score = float(distances[0][i])  # Convert to Python float for consistency
-            preview = qa_data[indices[0][i]].get("text", "")[:100] + "..."
-            print(f"  Rank {i+1}: Score={score:.3f} - {preview}")
+            print(f"  Rank {i+1}: Score={float(distances[0][i]):.3f} | Match='{extract_question_from_text(qa_data[indices[0][i]].get('text', ''))}'")
 
-    # Prepare related questions (always show closest matches excluding the main answer)
+
     def get_related_questions(exclude_index=None):
         related = []
         for i in range(TOP_K):
             if indices[0][i] < len(qa_data) and indices[0][i] != exclude_index:
                 text = qa_data[indices[0][i]].get("text", "")
-                question_preview = extract_question_from_text(text)
                 related.append({
-                    "question": question_preview,
+                    "question": extract_question_from_text(text),
                     "score": float(distances[0][i]),
                     "full_text": text,
                     "source": qa_data[indices[0][i]].get("source", "")
                 })
-        return related[:2]  # Return top 2 related questions
+        return related[:2]
 
-    # Check for very close matches first (high confidence)
     for i in range(TOP_K):
         if distances[0][i] <= DISTANCE_THRESHOLD and indices[0][i] < len(qa_data):
             text = qa_data[indices[0][i]].get("text", "")
             source = qa_data[indices[0][i]].get("source", "")
             related_questions = get_related_questions(exclude_index=indices[0][i])
-            
-            # Add related questions to the answer (moved lower with more spacing)
             if related_questions:
-                related_text = "\n\n\n<b>You might also be interested in:</b>\n" + "\n".join([f"• {q['question']}" for q in related_questions])
-                text += related_text
-            
-            print(f"⏱️ Direct match time: {time.time()-start_time:.2f}s (Score: {float(distances[0][i]):.3f})")
+                text += (
+                    "\n\n"
+                    "<hr>"
+                    "<b>You might also be interested in:</b><br>"
+                    + "<br>".join([f"• {q['question']}" for q in related_questions])
+                    + "<br><hr>"
+                )
+
+            print(f"⏱️ Direct match in {time.time()-start_time:.2f}s")
             return {
                 "matched_question": "Direct match",
                 "answer": text,
@@ -167,64 +183,44 @@ def generate_response_rag(user_query):
                 "related_questions": related_questions
             }
 
-    # Check for suggestion matches (medium confidence)
     suggestions = []
     for i in range(TOP_K):
-        if DISTANCE_THRESHOLD < distances[0][i] <= SUGGESTION_THRESHOLD and indices[0][i] < len(qa_data):
+        if DISTANCE_THRESHOLD < distances[0][i] <= SUGGESTION_THRESHOLD:
             text = qa_data[indices[0][i]].get("text", "")
-            question_preview = extract_question_from_text(text)
             suggestions.append({
-                "question": question_preview,
-                "score": float(distances[0][i]),  # Convert numpy.float32 to Python float
+                "question": extract_question_from_text(text),
+                "score": float(distances[0][i]),
                 "full_text": text,
                 "source": qa_data[indices[0][i]].get("source", "")
             })
 
-    # If we have suggestions, offer them
     if suggestions:
-        suggestions_text = "\n".join([f"• {s['question']}" for s in suggestions[:2]])  # Limit to 2 suggestions
-        # Also get additional related questions
-        all_related = get_related_questions()
-        
-        print(f"💡 Providing suggestions with scores: {[float(s['score']) for s in suggestions[:2]]}")
+        suggestions_text = "<br><hr>".join([f"• {s['question']}" for s in suggestions[:2]])
         return {
             "matched_question": None,
-            "answer": f"Sorry, I couldn't find an exact match for your question. Did you mean one of these:\n\n{suggestions_text}\n\nIf none of these match your question, please contact the Jurisprudential Committee at alljnahalfkheah@yahoo.com for guidance.",
+            "answer": f"Sorry, I couldn't find an exact match. Did you mean:\n\n{suggestions_text}",
             "source": "Suggestions provided",
             "is_refined": True,
             "confidence": "medium",
             "suggestions": suggestions[:2],
-            "related_questions": all_related
+            "related_questions": get_related_questions()
         }
 
-    # No good matches found - still show related questions
-    all_related = get_related_questions()
-    no_match_answer = "Sorry, I couldn't find a relevant answer to your question. Please contact the Jurisprudential Committee at alljnahalfkheah@yahoo.com for personalized guidance on Islamic jurisprudence matters."
-    
-    if all_related:
-        related_text = "\n\n\n<b>Here are some related topics that might help:</b>\n" + "\n".join([f"• {q['question']}" for q in all_related])
-        no_match_answer += related_text
-    
-    print(f"❌ No matches found. Best score was {float(distances[0][0]):.3f}, suggestion threshold is {SUGGESTION_THRESHOLD}")
     return {
         "matched_question": None,
-        "answer": no_match_answer,
+        "answer": "Sorry, I couldn't find a relevant answer. Please contact the Jurisprudential Committee at alljnahalfkheah@yahoo.com.",
         "source": "No match found",
         "is_refined": True,
         "confidence": "low",
-        "related_questions": all_related
+        "related_questions": get_related_questions()
     }
 
 # -------------------------------
-# FLASK ROUTES
+# ROUTES
 # -------------------------------
 @app.route('/')
 def serve_index():
     return send_from_directory(app.static_folder, 'index.html')
-
-@app.route('/static/<path:path>')
-def serve_static(path):
-    return send_from_directory(app.static_folder, path)
 
 @app.route('/health')
 def health_check():
@@ -238,18 +234,13 @@ def health_check():
 
 @app.route('/ask', methods=['POST'])
 def ask_question():
-    request_start = time.time()
     try:
         data = request.get_json()
         question = data.get('question', '')
-        print(f"📩 Received question: '{question}' at {time.strftime('%H:%M:%S')}")
-        response = generate_response_rag(question)
-        processing_time = time.time() - request_start
-        print(f"📤 Returning response in {processing_time:.2f}s: {response.get('confidence', 'unknown')} confidence")
-        return jsonify(response)
+        print(f"📩 Received: '{question}'")
+        return jsonify(generate_response_rag(question))
     except Exception as e:
-        processing_time = time.time() - request_start
-        print(f"❌ Request failed after {processing_time:.2f}s: {str(e)}")
+        print(f"❌ Error: {e}")
         return jsonify({"error": "Internal server error"}), 500
 
 @app.after_request
@@ -263,17 +254,13 @@ def after_request(response):
 # ENTRY POINT
 # -------------------------------
 if __name__ == '__main__':
-    print("🚀 Starting Flask server on port 8080...")
-    print("🌐 Access via: https://ahmed313.com")
-    print("📍 Local access: http://localhost:8080")
-    print("✨ Enhanced with improved semantic search")
-    print("(Press Ctrl+C to stop)")
-    
+    load_data(force_rebuild=True)  # ensure fresh start
+    start_file_watcher()  # watch for changes
     try:
         from waitress import serve
         serve(app, host="0.0.0.0", port=8080)
     except KeyboardInterrupt:
         print("\n🛑 Server stopped")
-        if 'observer' in globals():
+        if observer:
             observer.stop()
             observer.join()

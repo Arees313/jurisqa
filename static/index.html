@@ -38,6 +38,51 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            position: relative;
+        }
+        /* Animated down arrow for mobile at top */
+        .down-arrow-animate {
+            display: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .down-arrow-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f4fd;
+            color: #1a73e8;
+            font-weight: 600;
+            font-size: 1.08rem;
+            border-radius: 18px;
+            padding: 6px 18px 6px 12px;
+            box-shadow: 0 2px 8px rgba(30,80,180,0.07);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .down-arrow-label:hover {
+            background: #d2e7fa;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .down-arrow-svg {
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            animation: bounceDown 1.2s infinite cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes bounceDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        @media (max-width: 900px) {
+            .down-arrow-animate {
+                display: block;
+            }
         }
 
         @media (min-width: 768px) {
@@ -219,28 +264,127 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h2>Jurisprudence of Ahmed Alhasan (pbuh)</h2>
-        <div class="disclaimer">
-            Under Development: Answers may be incomplete or inaccurate. Please consult with the official jurisprudential committee at alljnahalfkheah@yahoo.com or authentic works of the Imam (pbuh), his books, or verified translations in Facebook groups for accurate jurisprudential guidance.
+
+    <style>
+        .main-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .sidebar {
+            min-width: 150px;
+            max-width: 180px;
+            background: #f7faff;
+            border-radius: 10px;
+            padding: 14px 8px;
+            box-shadow: 0 2px 8px rgba(30,80,180,0.06);
+            margin-top: 20px;
+            height: fit-content;
+        }
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #1a73e8;
+        }
+        .sidebar a {
+            display: block;
+            margin-bottom: 18px !important;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .sidebar a:hover {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column-reverse;
+                align-items: stretch;
+                max-width: 100%;
+            }
+            .sidebar {
+                max-width: 100%;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .container {
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <div class="main-layout">
+    <div class="sidebar" id="resources-section">
+            <h3>Resources</h3>
+            <div style="font-size:0.92rem; color:#555; margin-bottom:14px;">All these resources are also referenced and available through the Q&amp;A search.</div>
+            <a href="static/The Testimony Of Faith- Shahada.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 The Testimony Of Faith (Shahada)</a>
+            <a href="static/Halal and Haram animals.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Halal and Haram Animals</a>
+            <a href="static/Prayer Guide.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Prayer Guide</a>
+            <a href="static/Rulings on Khums.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Rulings on Khums</a>
+            <a href="static/Rulings on Zakat al fitr.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Rulings on Zakat al Fitr</a>
+            <a href="static/the book of fasting - jurisprudence.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 The Book of Fasting (Jurisprudence)</a>
+            <a href="static/Temporary Marriage.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Temporary Marriage</a>
+            <a href="static/Version 1 - Questions and Answers Jurisprudence of Prayer.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Q&A Jurisprudence of Prayer (Version 1)</a>
+            <a href="static/Version 2 - Questions and Answers Jurisprudence of Prayer.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Q&A Jurisprudence of Prayer (Version 2)</a>
+            <a href="static/Version 3 - Questions and Answers Jurisprudence of Prayer.pdf" target="_blank" style="margin-bottom: 14px; display: block;">📄 Q&A Jurisprudence of Prayer (Version 3)</a>
+                <div style="margin-top:28px;">
+                    <div style="font-size:1.01rem; color:#1a73e8; font-weight:600; margin-bottom:8px;">Latest from Ahmed Alhasan on X</div>
+                        <div style="margin-bottom:18px; text-align:center;">
+                            <a href="https://x.com/ahmedalhasan313?lang=en" target="_blank" rel="noopener noreferrer" style="display:inline-block; background: url('static/xahmed.png') center/cover no-repeat, #fff; border:2px solid #1da1f2; border-radius:24px; box-shadow:0 2px 8px rgba(30,80,180,0.07); min-width:120px; min-height:48px; width:60px; height:60px;">
+                                <span style="display:block; width:100%; height:100%;"></span>
+                            </a>
+                        </div>
+                    <div style="font-size:1.01rem; color:#1a73e8; font-weight:600; margin-bottom:8px;">Latest from Facebook</div>
+                    <div style="margin-bottom:8px;">
+                        <div class="fb-page" data-href="https://www.facebook.com/ahmedalhasan.10313/" data-tabs="timeline" data-width="260" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/ahmedalhasan.10313/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/ahmedalhasan.10313/">Ahmed Alhasan Facebook</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
         </div>
-        <div class="question-tip">
-            💡 <strong>Tip:</strong> Please provide detailed and specific questions for more accurate and comprehensive answers. Include relevant context, circumstances, or specific situations when applicable.
-        </div>
-        <textarea id="question" placeholder="Type your question here..."></textarea>
-        <button onclick="askQuestion()">Submit</button>
-        <div id="answer-content"></div>
-        <img src="static/flag.png" alt="Flag" class="flag-image">
-        <div class="links">
-            <p>
-                Official Arabic Website: 
-                <a href="https://almahdyoon.com" target="_blank" rel="noopener noreferrer">Almahdyoon.com</a>
-            </p>
-            <p>
-                Official English Website: 
-                <a href="https://saviorofmankind.com" target="_blank" rel="noopener noreferrer">Saviorofmankind.com</a>
-            </p>
+            <!-- X (Twitter) and Facebook embed scripts -->
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="fbembed"></script>
+        <div class="container">
+            <div class="down-arrow-animate" title="PDF resources below">
+                <a href="#resources-section" class="down-arrow-label">
+                    PDF resources below
+                    <svg class="down-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+            <h2>Jurisprudence of Ahmed Alhasan (pbuh)</h2>
+            <div class="disclaimer">
+                Under Development: Answers may be incomplete or inaccurate. Please consult with the official jurisprudential committee at alljnahalfkheah@yahoo.com or authentic works of the Imam (pbuh), his books, or verified translations in Facebook groups for accurate jurisprudential guidance.
+            </div>
+            <div class="question-tip">
+                💡 <strong>Tip:</strong> Please provide detailed and specific questions for more accurate and comprehensive answers. Include relevant context, circumstances, or specific situations when applicable.
+            </div>
+            <textarea id="question" placeholder="Type your question here..."></textarea>
+            <button onclick="askQuestion()">Submit</button>
+            <div id="answer-content"></div>
+            <img src="static/flag.png" alt="Flag" class="flag-image">
+            <div style="text-align:center; margin-top:12px; font-size:1.04rem; color:#222; font-weight:500;">
+                Official Jurisprudential Committee Email:<br>
+                <a href="mailto:alljnahalfkheah@yahoo.com" style="color:#1a73e8; text-decoration:underline; font-weight:500;">alljnahalfkheah@yahoo.com</a>
+            </div>
+            <div class="links">
+                <p>
+                    Official Arabic Website: 
+                    <a href="https://almahdyoon.com" target="_blank" rel="noopener noreferrer">Almahdyoon.com</a>
+                </p>
+                <p>
+                    Official English Website: 
+                    <a href="https://saviorofmankind.com" target="_blank" rel="noopener noreferrer">Saviorofmankind.com</a>
+                </p>
+            </div>
         </div>
     </div>
 
