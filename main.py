@@ -12,7 +12,7 @@ from watchdog.events import FileSystemEventHandler
 from rank_bm25 import BM25Okapi
 from typing import List, Dict, Tuple
 
-# -------------------------------
+# ------------------------------
 # CONFIGURATION
 # -------------------------------
 MODEL_NAME = "all-mpnet-base-v2"
@@ -22,7 +22,7 @@ DATA_FILE = "rag_knowledge_base.json"
 DISTANCE_THRESHOLD = 1.0
 SUGGESTION_THRESHOLD = 1.3
 TOP_K = 5
-HYBRID_ALPHA = 0.7
+HYBRID_ALPHA = 0.9
 
 # -------------------------------
 # INITIALIZATION

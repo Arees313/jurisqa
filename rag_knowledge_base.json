@@ -10638,7 +10638,7 @@
     ]
 },
 {
-    "id": "doc_1351",
+    "id": "doc_1679",
     "text": "Question: Are mixed-gender gyms and sports activities permissible in Western countries? \n\nAnswer: Bismillahi Alrahman Alraheem\nAlhamdulilahi rab al alameen\nAllahuma Salli Ala Muhammad Wa Aali Muhammad Al'Aemmata Wal Mahdyeen Wasalem Tasleema\nMay Allah grant you success\nYou can perform sports in many other places and they are available in your countries. As for the issue of finding an alternative, you can find it yourselves. As for your presence within a swimming arena that is mixed or a sports arena that is mixed, which leads to forbidden glances or anything else, this is not allowed.\nJurisprudence Committee\n29/Rabee Al Awal\n1441 Hijri Lunar Calendar",
     "source": "Fiqh | mixed-gender activities, sports, gym, swimming, western countries, Islamic conduct, gender interaction, Jurisprudence Committee ruling",
     "related_questions": [
@@ -10652,6 +10652,91 @@
         "Dealing with depression through halal sports?",
         "Can I go to a unisex yoga class?",
         "What physical activities are halal for Muslims?"
+    ]
+},
+{
+    "id": "doc_1680",
+    "text": "Question: What is the ruling on taking pills to prevent menstruation during Ramadan? And what is the ruling for intermittent bleeding during menstruation days? Answer: It is despised for her to consume pills so that she can prevent menstruation, as for seeing blood during the menstruation cycle, meaning 3 days or more--it is considered menstruation even if it was a little bit and discontinuous.",
+    "source": "Fiqh | menstruation, Ramadan, birth control pills, Islamic purity laws, women's fiqh, Book of Purity Vol.1 Pg.21, Ahmed AlHasan",
+    "related_questions": [
+        "Is it haram to delay periods for Ramadan?",
+        "Can I fast if I have irregular bleeding?",
+        "What breaks fast during menstruation?",
+        "Ruling on menstrual blood during salah?",
+        "Are period delay pills makruh?",
+        "How many days is minimum menstruation?",
+        "Can I take medicine to stop periods?",
+        "Does spotting count as menstruation?",
+        "Women's fasting during irregular cycles?",
+        "Islamic ruling on birth control for fasting?"
+    ]
+},
+{
+    "id": "doc_1681",
+    "text": "Question: What is the ruling on ovariectomy (surgical removal of ovaries) for birth control purposes when a woman claims she cannot bear pregnancy? Answer: It is permissible, but the married woman must have the satisfaction and approval of her husband.",
+    "source": "Fiqh | women's health, ovariectomy, birth control, sterilization, Islamic medical ethics, marital consent, Answers of Jurisprudence Vol.1 P.37",
+    "related_questions": [
+        "Is permanent sterilization allowed in Islam?",
+        "Can a woman remove her ovaries without husband's permission?",
+        "What are Islamic rulings on surgical birth control?",
+        "Is tubal ligation halal in Islam?",
+        "Ruling on hysterectomy for birth control?",
+        "Does Islam allow permanent contraception?",
+        "When is ovarian removal permissible?",
+        "Husband's rights regarding wife's fertility?",
+        "Islamic view on elective sterilization?",
+        "Medical procedures for birth control in Islam?"
+    ]
+},
+{
+    "id": "doc_1682",
+    "text": "Question: What is the Islamic ruling on birth control methods (tubal ligation, pills, IUDs) for temporary or permanent prevention of pregnancy, including cases of health concerns or financial hardship? Answer: It is permissible to use the methods of birth control mentioned in the question (tying, pills, loop) and the abortion is impermissible after fertilization.",
+    "source": "Fiqh | birth control, contraception, family planning, tubal ligation, contraceptive pills, IUDs, Islamic medical ethics, poverty concerns, health exemptions, Answers of Jurisprudence Vol.1 P.37",
+    "related_questions": [
+        "Is permanent birth control allowed in Islam?",
+        "Can Muslims use contraceptive pills?",
+        "Ruling on IUDs for birth control?",
+        "Is tubal ligation halal or haram?",
+        "Islamic view on birth control for financial reasons?",
+        "When is contraception permissible in marriage?",
+        "Difference between birth control and abortion in Islam?",
+        "Temporary vs permanent birth control rulings?",
+        "Health exceptions for contraception in Islam?",
+        "Husband's consent for birth control methods?"
+    ]
+},
+{
+    "id": "doc_1683",
+    "text": "Question: Is it permissible to use a contraceptive loop (IUD), and can a man insert it? Answer: It is permissible to use it with the approval of the husband, and it is impermissible for a man to put it.",
+    "source": "Fiqh | birth control, IUD, contraceptive loop, marital consent, women's health, Islamic medical ethics, Answers of Jurisprudence Vol.1 P.37",
+    "related_questions": [
+        "Are IUDs halal in Islam?",
+        "Can a husband insert contraceptive devices?",
+        "Ruling on intrauterine devices (IUDs)?",
+        "Does a wife need husband's permission for IUD?",
+        "Islamic view on long-term contraception?",
+        "Who can insert birth control devices in Islam?",
+        "Is the contraceptive loop allowed permanently?",
+        "Difference between IUD and other birth control?",
+        "Female-controlled contraception in Islam?",
+        "Medical procedures requiring spousal consent in Islam?"
+    ]
+},
+{
+    "id": "doc_1684",
+    "text": "Question: Is it permissible for a female doctor to insert a contraceptive loop (IUD) despite the required medical examination? Answer: It is permissible.",
+    "source": "Fiqh | birth control, IUD, contraceptive loop, women's health, female doctors, medical necessity, Islamic medical ethics, Answers of Jurisprudence Vol.1 P.37",
+    "related_questions": [
+        "Are gynecological exams allowed in Islam?",
+        "Can a female doctor examine private parts for IUD insertion?",
+        "Ruling on medical necessity for exposing awrah?",
+        "Is IUD insertion halal with a female doctor?",
+        "Islamic guidelines for female healthcare providers?",
+        "Permissibility of contraception requiring physical exams?",
+        "What medical procedures are exempt from awrah rules?",
+        "Can Muslim women use birth control requiring exams?",
+        "Gender rules for doctors in Islamic medicine?",
+        "Conditions for exposing awrah to female doctors?"
     ]
 }
 
