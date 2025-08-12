@@ -362,20 +362,74 @@
             </div>
             <h2>Jurisprudence of Ahmed Alhasan (pbuh)</h2>
             <div class="disclaimer">
-                Under Development: Answers may be incomplete or inaccurate. Please consult with the official jurisprudential committee at alljnahalfkheah@yahoo.com or authentic works of the Imam (pbuh), his books, or verified translations in Facebook groups for accurate jurisprudential guidance.
+                Under Development. 
             </div>
             <div class="question-tip">
                 💡 <strong>Tip:</strong> Please provide detailed and specific questions for more accurate and comprehensive answers. Include relevant context, circumstances, or specific situations when applicable.
             </div>
-            <textarea id="question" placeholder="Type your question here..."></textarea>
+            <textarea id="question" placeholder="Type your question here... e.g. what is the ruling on khums?"></textarea>
             <button onclick="askQuestion()">Submit</button>
             <div id="answer-content"></div>
-            <img src="static/flag.png" alt="Flag" class="flag-image">
-            <div style="text-align:center; margin-top:12px; font-size:1.04rem; color:#222; font-weight:500;">
+            <img src="static/flag.png" alt="Flag" class="flag-image" style="max-width:120px; margin-top:18px; margin-bottom:8px;">
+            <div style="text-align:center; margin-top:8px; font-size:1.04rem; color:#222; font-weight:500;">
                 Official Jurisprudential Committee Email:<br>
                 <a href="mailto:alljnahalfkheah@yahoo.com" style="color:#1a73e8; text-decoration:underline; font-weight:500;">alljnahalfkheah@yahoo.com</a>
             </div>
+            <div id="prayer-times-section" class="prayer-times-section">
+                <h3>Prayer Times</h3>
+                <div class="prayer-times-desc">Enter your location to get accurate prayer times:</div>
+                <a href="https://www.praytime-almahdyoon.com/" target="_blank" rel="noopener noreferrer" class="prayer-times-btn">
+                    Open Prayer Times
+                </a>
+            </div>
             <div class="links">
+    <style>
+        .prayer-times-section {
+            margin: 22px auto 0 auto;
+            max-width: 420px;
+            text-align: center;
+        }
+        .prayer-times-section h3 {
+            color: #1a73e8;
+            font-size: 1.13rem;
+            margin-bottom: 6px;
+            margin-top: 10px;
+        }
+        .prayer-times-desc {
+            font-size: 0.97rem;
+            color: #444;
+            margin-bottom: 14px;
+        }
+        .prayer-times-btn {
+            display: inline-block;
+            background: #1a73e8;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.08rem;
+            border-radius: 22px;
+            padding: 12px 32px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(30,80,180,0.10);
+            transition: background 0.2s;
+        }
+        .prayer-times-btn:hover {
+            background: #1558b0;
+        }
+        @media (max-width: 900px) {
+            .prayer-times-section {
+                margin-top: 12px !important;
+                margin-bottom: 18px !important;
+                order: 1;
+            }
+            .flag-image + .prayer-times-section {
+                display: block;
+            }
+            /* Move prayer times section up on mobile */
+            .container > .prayer-times-section {
+                order: -1;
+            }
+        }
+    </style>
                 <p>
                     Official Arabic Website: 
                     <a href="https://almahdyoon.com" target="_blank" rel="noopener noreferrer">Almahdyoon.com</a>
@@ -461,21 +515,31 @@
                     }
 
                     const clickableAnswer = data.answer
-                        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+                        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1<\/a>')
                         .replace(/\n\n/g, '</p><p>')  // Convert double newlines to paragraph breaks
                         .replace(/\n/g, '<br>')      // Convert single newlines to line breaks
                         .replace(/^/, '<p>')         // Add opening paragraph tag
                         .replace(/$/, '</p>');       // Add closing paragraph tag
 
-                    answerContent.innerHTML = `
-                        <div class="question-display">Question: ${question}</div>
-                        <div class="answer-section">
-                            <div class="answer-display">${clickableAnswer}</div>
-                            ${embeddedContent}
-                            ${data.source && data.source !== "N/A" ? 
-                                `<div class="source">Source: ${data.source}</div>` : ''}
-                        </div>
-                    `;
+                            // Render all links just beneath the answer
+                            let linksHtml = '';
+                            if (data.links && Array.isArray(data.links) && data.links.length > 0) {
+                                linksHtml = `<div class="answer-links" style="margin: 12px 0 8px 0;">` +
+                                    data.links.map(link => `<a href="${link}" target="_blank" rel="noopener noreferrer" style="color:#1a73e8;word-break:break-all;display:block;margin-bottom:6px;">${link}</a>`).join('') +
+                                    `</div>`;
+                            }
+
+                            // Move embeddedContent (YouTube video) right after the answer and links
+                            answerContent.innerHTML = `
+                                <div class="question-display">Question: ${question}</div>
+                                <div class="answer-section">
+                                    <div class="answer-display">${clickableAnswer}</div>
+                                    ${linksHtml}
+                                    ${embeddedContent}
+                                    ${data.source && data.source !== "N/A" ? 
+                                        `<div class="source">Source: ${data.source}</div>` : ''}
+                                </div>
+                            `;
                 } else {
                     answerContent.innerHTML = `
                         <div class="question-display">Question: ${question}</div>

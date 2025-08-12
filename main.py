@@ -22,7 +22,7 @@ DATA_FILE = "rag_knowledge_base.json"
 DISTANCE_THRESHOLD = 1.0
 SUGGESTION_THRESHOLD = 1.3
 TOP_K = 5
-HYBRID_ALPHA = 0.9
+HYBRID_ALPHA = 1.0
 
 # -------------------------------
 # INITIALIZATION
@@ -137,6 +137,21 @@ def hybrid_search(query: str, top_k: int = TOP_K) -> Tuple[np.ndarray, np.ndarra
 # RESPONSE GENERATION
 # -------------------------------
 def generate_response_rag(user_query):
+
+    # Check for single-word queries
+    if len(user_query.strip().split()) == 1:
+        return {
+            "matched_question": None,
+            "answer": (
+                "Your question appears to be too brief. "
+                "Please provide more details or context so we can offer an accurate and helpful answer."
+            ),
+            "source": "Query too short",
+            "is_refined": True,
+            "confidence": "low",
+            "related_questions": []
+        }
+
     start_time = time.time()
     distances, indices = hybrid_search(user_query, TOP_K)
 
