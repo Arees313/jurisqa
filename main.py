@@ -9,7 +9,6 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from rank_bm25 import BM25Okapi
 from typing import List, Dict, Tuple
 
 # ------------------------------
@@ -22,7 +21,6 @@ DATA_FILE = "rag_knowledge_base.json"
 DISTANCE_THRESHOLD = 1.0
 SUGGESTION_THRESHOLD = 1.3
 TOP_K = 5
-HYBRID_ALPHA = 1.0
 
 # -------------------------------
 # INITIALIZATION
@@ -33,9 +31,7 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 # Globals
 qa_data = []
 indexed_texts = []
-tokenized_corpus = []
 index = None
-bm25 = None
 model = SentenceTransformer(MODEL_NAME)
 observer = None  # file watcher
 
@@ -57,7 +53,7 @@ def load_data(force_rebuild=False):
     """
     Loads Q&A data, rebuilds embeddings/index if necessary.
     """
-    global qa_data, indexed_texts, tokenized_corpus, index, bm25
+    global qa_data, indexed_texts, index
 
     print("\n📖 Loading Q&A data...")
     with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -66,7 +62,6 @@ def load_data(force_rebuild=False):
     qa_data = list(raw_data.values()) if isinstance(raw_data, dict) else raw_data
 
     indexed_texts = []
-    tokenized_corpus = []
     for item in qa_data:
         text_content = item.get("text", "")
         related_questions = item.get("related_questions", [])
@@ -74,9 +69,6 @@ def load_data(force_rebuild=False):
             text_content += " " + " ".join(related_questions)
         normalized_text = normalize(text_content)
         indexed_texts.append(normalized_text)
-        tokenized_corpus.append(normalized_text.split())
-
-    bm25 = BM25Okapi(tokenized_corpus)
 
     # Decide whether to rebuild
     if force_rebuild or not os.path.exists(FAISS_INDEX_FILE) or not os.path.exists(EMBEDDINGS_FILE):
@@ -116,22 +108,12 @@ def start_file_watcher():
 # -------------------------------
 # HYBRID SEARCH
 # -------------------------------
-def hybrid_search(query: str, top_k: int = TOP_K) -> Tuple[np.ndarray, np.ndarray]:
+
+# EMBEDDING SEARCH ONLY
+def embedding_search(query: str, top_k: int = TOP_K) -> Tuple[np.ndarray, np.ndarray]:
     query_embedding = model.encode([normalize(query)])
-    faiss_distances, faiss_indices = index.search(query_embedding, top_k * 2)
-    tokenized_query = normalize(query).split()
-    bm25_scores = bm25.get_scores(tokenized_query)
-    max_bm25 = max(bm25_scores) if max(bm25_scores) > 0 else 1
-    normalized_bm25 = [score / max_bm25 for score in bm25_scores]
-    combined_scores = []
-    for idx in range(len(indexed_texts)):
-        faiss_sim = 1 / (1 + faiss_distances[0][0]) if idx in faiss_indices[0] else 0
-        combined = (HYBRID_ALPHA * faiss_sim) + ((1 - HYBRID_ALPHA) * normalized_bm25[idx])
-        combined_scores.append((idx, combined))
-    combined_scores.sort(key=lambda x: x[1], reverse=True)
-    top_indices = np.array([idx for idx, _ in combined_scores[:top_k]])
-    top_scores = np.array([1 - score for _, score in combined_scores[:top_k]])
-    return top_scores.reshape(1, -1), top_indices.reshape(1, -1)
+    faiss_distances, faiss_indices = index.search(query_embedding, top_k)
+    return faiss_distances, faiss_indices
 
 # -------------------------------
 # RESPONSE GENERATION
@@ -153,7 +135,7 @@ def generate_response_rag(user_query):
         }
 
     start_time = time.time()
-    distances, indices = hybrid_search(user_query, TOP_K)
+    distances, indices = embedding_search(user_query, TOP_K)
 
     print(f"🔍 Hybrid search results for '{user_query}':")
     for i in range(TOP_K):
